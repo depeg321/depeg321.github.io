@@ -123,13 +123,13 @@
             width: 100%;
             z-index: 1000;
             background: rgba(255, 255, 255, 0.95);
-            box-shadow: var(--shadow);
-            padding: 20px 0;
+            padding: 15px 0; /* Reduced padding */
             transition: var(--transition);
+            border-bottom: 1px solid #000; /* Black border instead of shadow */
         }
 
         header.scrolled {
-            padding: 15px 0;
+            padding: 10px 0; /* Reduced padding when scrolled */
         }
 
         nav {
@@ -138,9 +138,14 @@
             align-items: center;
         }
 
-        /* Logo styling - ADDED */
+        /* Logo styling - UPDATED */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
         .logo-img {
-            height: 50px; /* Perfect logo size */
+            height: 45px; /* Slightly reduced size */
             width: auto;
             transition: var(--transition);
         }
@@ -182,6 +187,7 @@
         .hamburger {
             display: none;
             cursor: pointer;
+            z-index: 1001;
         }
 
         /* Hero Section */
@@ -523,16 +529,17 @@
         @media (max-width: 768px) {
             .nav-links {
                 position: fixed;
-                top: 80px;
+                top: 0;
                 left: -100%;
-                width: 100%;
-                height: calc(100vh - 80px);
+                width: 70%;
+                height: 100vh;
                 background: white;
                 flex-direction: column;
                 align-items: center;
-                padding-top: 50px;
+                padding-top: 100px;
                 transition: var(--transition);
-                box-shadow: var(--shadow);
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
             }
             
             .nav-links.active {
@@ -540,11 +547,13 @@
             }
             
             .nav-links li {
-                margin: 15px 0;
+                margin: 20px 0;
             }
             
             .hamburger {
                 display: block;
+                position: relative;
+                z-index: 1001;
             }
             
             .hero {
@@ -592,11 +601,13 @@
     <header>
         <div class="container">
             <nav>
-                <a href="#" class="logo">
-                    <img src="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/Logo.JPEG" 
-                         alt="Company Logo" 
-                         class="logo-img">
-                </a>
+                <div class="logo-container">
+                    <a href="#" class="logo">
+                        <img src="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/Logo.JPEG" 
+                             alt="Company Logo" 
+                             class="logo-img">
+                    </a>
+                </div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -686,19 +697,11 @@
         </div>
     </section>
 
-    <!-- Portfolio Section (Completed) -->
+    <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <h2>My Portfolio</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Project 1">
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>E-Commerce Website</h3>
-                        <p>Full-featured online store with payment integration</p>
-                        <a href="#" class="btn btn-outline" style="margin-top: 15px;">View Project</a>
-                    </div>
-                </div>
-       
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w
