@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIFETIME STUCCO EXTERIORS| Restoration and Remodeling</title>
+    <title>LIFETIME STUCCO EXTERIORS | Restoration and Remodeling</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <style>
@@ -136,22 +136,36 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 5px 0;
         }
 
         /* Logo styling - UPDATED */
         .logo-container {
             display: flex;
             align-items: center;
+            margin: 0 15px; /* Added margin for spacing */
         }
 
         .logo-img {
             height: 175px;                   /* Slightly reduced size */
             width: auto;
             transition: var(--transition);
-       }
+            margin-right: 15px; /* Added spacing between logo and text */
+        }
 
         .logo-img:hover {
             transform: scale(1.05);
+        }
+        
+        /* Added text container for company name */
+        .company-text {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
         }
 
         .nav-links {
@@ -189,6 +203,8 @@
             cursor: pointer;
             z-index: 1001;
             color: white;                 /* White hamburger icon */
+            font-size: 1.8rem;
+            padding: 10px;
         }
 
         /* Hero Section */
@@ -207,18 +223,29 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+');
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 90%),
+                radial-gradient(circle at 90% 80%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 90%);
+            opacity: 0.3;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
             max-width: 650px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.3rem;
             margin-bottom: 30px;
         }
 
@@ -226,15 +253,16 @@
             display: flex;
             gap: 15px;
             margin-top: 30px;
+            justify-content: center;
         }
 
         .hero .btn-outline {
-            color: black;
+            color: white;
             border-color: white;
         }
 
         .hero .btn-outline:hover {
-            background: blue;
+            background: white;
             color: var(--primary);
         }
 
@@ -283,6 +311,18 @@
             border-radius: 50px;
             font-size: 0.9rem;
             font-weight: 500;
+        }
+        
+        .about-video {
+            margin-bottom: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-video video {
+            width: 100%;
+            display: block;
         }
 
         /* Services Section */
@@ -537,7 +577,8 @@
                 background: black;       /* Black background for mobile menu */
                 flex-direction: column;
                 align-items: center;
-                padding-top: 100px;
+                justify-content: center;
+                padding-top: 80px;
                 transition: var(--transition);
                 box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
                 z-index: 1000;
@@ -564,7 +605,7 @@
             
             .hero-btns {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
             }
             
             .hero-btns .btn {
@@ -575,6 +616,10 @@
             /* Logo size for mobile */
             .logo-img {
                 height: 150px;
+            }
+            
+            .company-text {
+                font-size: 1.2rem;
             }
         }
 
@@ -604,6 +649,15 @@
             header.scrolled {
                 padding: 4px 0;
             }
+            
+            .company-text {
+                font-size: 1rem;
+                white-space: normal;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
         }
     </style>
 </head>
@@ -618,6 +672,7 @@
                              alt="Company Logo" 
                              class="logo-img">
                     </a>
+                    <div class="company-text">LIFETIME STUCCO EXTERIORS</div>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
@@ -637,79 +692,42 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                
-                
-                
-                <h3></h3>
                 <h1>LIFETIME STUCCO EXTERIORS</h1>
-                <p>3rd Generation Stucco Contracter... Specialized in Remodeling, Repairs, Architectural Design.</p>
+                <p>3rd Generation Stucco Contractor... Specialized in Remodeling, Repairs, Architectural Design.</p>
                 <div class="hero-btns">
-                    <a href="#portfolio" class="btn">View My Work</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    <a href="#portfolio" class="btn">View Our Work</a>
+                    <a href="#contact" class="btn btn-outline">Contact Us</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-<section id="about" class="about">
-    <div class="container">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div class="about-video">
-                <video controls autoplay loop muted playsinline>
-                    <source src="https://depeg321.github.io/FB_VID_6264418394044457844.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-                <div class="about-text">
-                    <h3>I'm a Professional Stucco and Masonry Repair Specialist and offer Exterior Painting Services</h3>
-                    <p>With over 20 years of experience in Concrete/Stucco Restoration, I specialize in restoring damaged or remodeling of anything in masonry. Stucco, Brick, Stone, as well as matching surfaces after a new roof is installed and the new flashing is needed waterproofing and sealed.</p>
-            <div class="about-video">
-                <video controls autoplay loop muted playsinline>
-                    <source src="https://depeg321.github.io/FB_VID_6264418394044457844.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-                    <p></p>
-            <div class="about-video">
-                <video controls autoplay loop muted playsinline>
-                    <source src="https://depeg321.github.io/FB_VID_6264418394044457844.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-                   <p></p>
-                    <div class="skills">
-                        <span class="skill">HTML5</span>
-                        <span class="skill">CSS3</span>
-                        <span class="skill">JavaScript</span>
-                        <span class="skill">React</span>
-                        <span class="skill">Vue.js</span>
-                        <span class="skill">SASS</span>
-                        <span class="skill">Responsive Design</span>
-                        <span class="skill">UI/UX</span>
-                    </div>
-                    <a href="#" class="btn" style="margin-top: 30px;">Download CV</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="about" class="about">
         <div class="container">
-            <h2>My Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div>
+                    <div class="about-video">
+                        <video controls autoplay loop muted playsinline>
+                            <source src="https://depeg321.github.io/FB_VID_6264418394044457844.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
-                    <h3>Web Development</h3>
-                    <p>Custom website development with modern technologies. Clean, efficient code that follows best practices.</p>
+                    <div class="about-video">
+                        <video controls autoplay loop muted playsinline>
+                            <source src="https://depeg321.github.io/FB_VID_6264418394044457844.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Responsive Design</h3>
-                    <p>Website
+                <div class="about-text">
+                    <h3>Professional Stucco and Masonry Repair Specialist</h3>
+                    <p>With over 20 years of experience in Concrete/Stucco Restoration, we specialize in restoring damaged or remodeling of anything in masonry. Stucco, Brick, Stone, as well as matching surfaces after a new roof is installed and the new flashing is needed waterproofing and sealed.</p>
+                    <p>Our team combines traditional techniques with modern materials to deliver exceptional results that stand the test of time. We take pride in our craftsmanship and attention to detail.</p>
+                    <div class="skills">
+                        <span class="skill">Stucco Repair</span>
+                        <span class="skill">Concrete Restoration</span>
+                        <span class="skill">Brickwork</span>
+                        <span class="skill">Stone Masonry</span>
+   
