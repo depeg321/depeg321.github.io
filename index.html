@@ -951,6 +951,76 @@
             }
         }
     </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* MAIN HEADER STYLING */
+        #main-header {
+            position: relative;
+            background-color: black; /* Black background box */
+            border: 2px solid white; /* White border */
+            padding: 10px 0; /* Adjust padding as needed */
+        }
+
+        /* GIF CONTAINER - POSITIONED OVER BLACK BOX */
+        .header-gif-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0; /* Behind content but over black box */
+            overflow: hidden;
+        }
+
+        .header-gif {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7; /* Adjust transparency as needed */
+        }
+
+        .gif-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 20%, transparent 50%);
+        }
+
+        /* CONTENT POSITIONING - ABOVE GIF */
+        .container {
+            position: relative;
+            z-index: 1; /* Above the GIF */
+        }
+
+        .logo-container {
+            background-color: rgba(0,0,0,0.5); /* Semi-transparent black */
+            padding: 5px 10px;
+            display: inline-block;
+            border-radius: 4px;
+        }
+
+        .nav-links {
+            background-color: rgba(0,0,0,0.5); /* Semi-transparent black */
+            padding: 5px 15px;
+            border-radius: 4px;
+        }
+
+        /* MOBILE ADJUSTMENTS */
+        @media (max-width: 768px) {
+            .header-gif {
+                object-position: center;
+            }
+            
+            .logo-container,
+            .nav-links {
+                background-color: rgba(0,0,0,0.7); /* Darker for mobile readability */
+            }
+        }
+    </style>
 </head>
 <body>
     <header id="main-header">
@@ -986,6 +1056,8 @@
             </nav>
         </div>
     </header>
+</body>
+</html>
 
      <!-- Hero Section -->
     <section id="home" class="hero">
