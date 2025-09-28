@@ -1230,86 +1230,88 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4>Location</h4>
-                                <div class="contact-text map-link" onclick="openMap()" role="button" tabindex="0">
-                                    Billings, Montana
-                                </div>
-                            </div>
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div>
-                                <h4>Phone</h4>
-                                <div class="contact-text phone-link" onclick="callPhone()" role="button" tabindex="0">
-                                    (406) 233-9557
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h4>Email</h4>
-                                <div class="contact-text email-link" onclick="sendEmail()" role="button" tabindex="0">
-                                    dannyedwardparsons@gmail.com
-                                </div>
+                        <div>
+                            <h4>Location</h4>
+                            <div class="contact-text map-link" onclick="openMap()" role="button" tabindex="0">
+                                Billings, Montana, 59102
                             </div>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/share/1BiJ9kM9hC/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://x.com/D3P3G321?t=rljLkiASPqNsFUfH0_Tccw&s=09" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/lifetime.stucco.exteriors?igsh=MWNmaGwxcWc3MHdybQ==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/lifetimestuccoexteriors?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <div class="contact-text phone-link" onclick="callPhone()" role="button" tabindex="0">
+                                (406) 233-9557
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <div class="contact-text email-link" onclick="sendEmail()" role="button" tabindex="0">
+                                dannyedwardparsons@gmail.com
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Your Phone" aria-label="Your Phone">
-                        </div>
-                        <div class="form-group">
-                            <select name="service" aria-label="Service Interested In">
-                                <option value="" disabled selected>Service Interested In</option>
-                                <option value="interior-painting">Interior Painting</option>
-                                <option value="exterior-painting">Exterior Painting</option>
-                                <option value="drywall-installation">Drywall Installation</option>
-                                <option value="drywall-repair">Drywall Repair</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" required aria-label="Your Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1BiJ9kM9hC/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/D3P3G321?t=rljLkiASPqNsFUfH0_Tccw&s=09" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/lifetime.stucco.exteriors?igsh=MWNmaGwxcWc3MHdybQ==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/lifetimestuccoexteriors?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
+            <div class="contact-form">
+                <form id="contactForm" action="https://formspree.io/f/mblkddjg" method="POST">
+                    <input type="hidden" name="_subject" value="New Contact Form Submission from Danny E Parsons Website">
+                    <input type="hidden" name="_replyto" value="dannyedwardparsons@gmail.com">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Your Phone" aria-label="Your Phone">
+                    </div>
+                    <div class="form-group">
+                        <select name="service" aria-label="Service Interested In">
+                            <option value="" disabled selected>Service Interested In</option>
+                            <option value="interior-painting">Interior Painting</option>
+                            <option value="exterior-painting">Exterior Painting</option>
+                            <option value="drywall-installation">Drywall Installation</option>
+                            <option value="drywall-repair">Drywall Repair</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" required aria-label="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
