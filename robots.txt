@@ -2,10 +2,24 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dannyeparsonspainting.com/sitemap.xml
-
-# Custom rules for search engines
+# SEO-friendly directives
 Disallow: /private/
 Disallow: /admin/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+
+# Crawl delay to be gentle on server
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://dannyeparsonspainting.com/sitemap.xml
+
+# Specific search engine instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
 Crawl-delay: 1
 ```
