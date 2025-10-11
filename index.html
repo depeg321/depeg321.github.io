@@ -327,7 +327,7 @@
             overflow: hidden;
             text-align: center;
             margin-top: -100px;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            /* Removed clip-path for straight edges */
         }
 
         .hero:before {
@@ -407,11 +407,18 @@
             border-radius: var(--radius);
             box-shadow: var(--shadow);
             transition: var(--transition);
+            cursor: pointer;
         }
 
         .area-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
+            background: var(--gradient);
+            color: white;
+        }
+
+        .area-card:hover h3 {
+            color: white;
         }
 
         .area-card h3 {
@@ -540,6 +547,7 @@
             position: relative;
             overflow: hidden;
             z-index: 1;
+            cursor: pointer;
         }
 
         .service-card:before {
@@ -653,9 +661,9 @@
             background: var(--gradient);
             color: white;
             text-align: center;
-            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+            /* Removed clip-path for straight edges */
             padding: 150px 0;
-            margin-top: -50px;
+            margin-top: 0;
             position: relative;
             z-index: 0;
         }
@@ -849,8 +857,8 @@
             color: white;
             padding: 100px 0 30px;
             position: relative;
-            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-            margin-top: -50px;
+            /* Removed clip-path for straight edges */
+            margin-top: 0;
         }
 
         .footer-content {
@@ -951,6 +959,44 @@
             transform: translateY(0);
         }
 
+        /* Vibrant additions */
+        .vibrant-accent {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vibrant-accent:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .vibrant-accent:hover:before {
+            opacity: 1;
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
         /* Responsive Design */
         @media (max-width: 1200px) {
             h1 {
@@ -1042,7 +1088,6 @@
             
             .hero {
                 padding: 50px 0 100px;
-                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
             }
             
             .hero-content {
@@ -1159,8 +1204,8 @@
                 <h1>Professional Painting & Drywall Services in Billings MT</h1>
                 <p>Expert painting contractor and drywall contractor serving Billings, Laurel, Shepherd and Yellowstone County since 2025. Quality interior painting, exterior painting, and drywall repair.</p>
                 <div class="hero-btns">
-                    <a href="#portfolio" class="btn">View Our Billings Projects</a>
-                    <a href="#contact" class="btn btn-outline">Free Estimate (406) 233-9557</a>
+                    <a href="#portfolio" class="btn pulse">View Our Billings Projects</a>
+                    <a href="#contact" class="btn btn-outline pulse">Free Estimate (406) 233-9557</a>
                 </div>
             </div>
         </div>
@@ -1173,30 +1218,30 @@
             <p>Professional painting and drywall services serving Billings, Laurel, Shepherd, Billings Heights, West End, Downtown Billings, and Yellowstone County since 2008. We're your local experts for all your painting and drywall needs.</p>
             
             <div class="areas-grid">
-                <div class="area-card">
+                <a href="https://example.com/billings-painting" target="_blank" class="area-card vibrant-accent">
                     <h3>Billings</h3>
                     <p>Full-service painting & drywall</p>
-                </div>
-                <div class="area-card">
+                </a>
+                <a href="https://example.com/laurel-painting" target="_blank" class="area-card vibrant-accent">
                     <h3>Laurel</h3>
                     <p>Residential & commercial projects</p>
-                </div>
-                <div class="area-card">
+                </a>
+                <a href="https://example.com/shepherd-painting" target="_blank" class="area-card vibrant-accent">
                     <h3>Shepherd</h3>
                     <p>Interior & exterior services</p>
-                </div>
-                <div class="area-card">
+                </a>
+                <a href="https://example.com/billings-heights-painting" target="_blank" class="area-card vibrant-accent">
                     <h3>Billings Heights</h3>
                     <p>Emergency drywall repair</p>
-                </div>
-                <div class="area-card">
+                </a>
+                <a href="https://example.com/west-end-painting" target="_blank" class="area-card vibrant-accent">
                     <h3>West End</h3>
                     <p>New construction painting</p>
-                </div>
-                <div class="area-card">
+                </a>
+                <a href="https://example.com/yellowstone-county-painting" target="_blank" class="area-card vibrant-accent">
                     <h3>Yellowstone County</h3>
                     <p>Complete service coverage</p>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -1266,7 +1311,7 @@
                         <span class="skill">Texture Matching</span>
                         <span class="skill">Color Consultation</span>
                     </div>
-                    <a href="#contact" class="btn" style="margin-top: 25px;">Request Free Billings Estimate</a>
+                    <a href="#contact" class="btn vibrant-accent" style="margin-top: 25px;">Request Free Billings Estimate</a>
                 </div>
             </div>
         </div>
@@ -1277,34 +1322,34 @@
         <div class="container">
             <h2>Our Painting & Drywall Services</h2>
             <div class="services-grid">
-                <div class="service-card animate-on-scroll">
+                <a href="https://example.com/interior-painting-billings" target="_blank" class="service-card animate-on-scroll vibrant-accent">
                     <div class="service-icon">
                         <i class="fas fa-paint-roller"></i>
                     </div>
                     <h3>Interior Painting Billings</h3>
                     <p>Professional interior painting services for Billings homes and businesses. We transform your space with precision and attention to detail using quality paints that last.</p>
-                </div>
-                <div class="service-card animate-on-scroll">
+                </a>
+                <a href="https://example.com/exterior-painting-montana" target="_blank" class="service-card animate-on-scroll vibrant-accent">
                     <div class="service-icon">
                         <i class="fas fa-home"></i>
                     </div>
                     <h3>Exterior Painting Montana</h3>
                     <p>Protect and beautify your Billings property with our expert exterior painting services using weather-resistant paints designed for Montana conditions.</p>
-                </div>
-                <div class="service-card animate-on-scroll">
+                </a>
+                <a href="https://example.com/drywall-installation-billings" target="_blank" class="service-card animate-on-scroll vibrant-accent">
                     <div class="service-icon">
                         <i class="fas fa-tools"></i>
                     </div>
                     <h3>Drywall Installation</h3>
                     <p>Professional drywall installation for new construction, renovations, and remodeling projects throughout Yellowstone County. Perfect finishes every time.</p>
-                </div>
-                <div class="service-card animate-on-scroll">
+                </a>
+                <a href="https://example.com/drywall-repair-billings" target="_blank" class="service-card animate-on-scroll vibrant-accent">
                     <div class="service-icon">
                         <i class="fas fa-hammer"></i>
                     </div>
                     <h3>Drywall Repair Billings</h3>
                     <p>Expert drywall repair services for cracks, holes, water damage, and other drywall issues. Emergency same-day service available for urgent repairs.</p>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -1456,7 +1501,7 @@
                         <div class="form-group">
                             <textarea name="message" placeholder="Your Message - Please include your location in Billings/Laurel/Shepherd" required aria-label="Your Message"></textarea>
                         </div>
-                        <button type="submit" class="btn">Send Message to Billings Painter</button>
+                        <button type="submit" class="btn vibrant-accent">Send Message to Billings Painter</button>
                     </form>
                 </div>
             </div>
@@ -1494,11 +1539,11 @@
                 <div class="footer-col">
                     <h4>Services</h4>
                     <ul class="footer-links">
-                        <li><a href="#services">Interior Painting Billings</a></li>
-                        <li><a href="#services">Exterior Painting Montana</a></li>
-                        <li><a href="#services">Drywall Installation</a></li>
-                        <li><a href="#services">Drywall Repair Billings</a></li>
-                        <li><a href="#services">Emergency Repairs</a></li>
+                        <li><a href="https://example.com/interior-painting-billings">Interior Painting Billings</a></li>
+                        <li><a href="https://example.com/exterior-painting-montana">Exterior Painting Montana</a></li>
+                        <li><a href="https://example.com/drywall-installation-billings">Drywall Installation</a></li>
+                        <li><a href="https://example.com/drywall-repair-billings">Drywall Repair Billings</a></li>
+                        <li><a href="https://example.com/emergency-repair">Emergency Repairs</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
