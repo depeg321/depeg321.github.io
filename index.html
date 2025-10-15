@@ -26,18 +26,15 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
 
-    <!-- Web App Manifest -->
-    <link rel="manifest" href="/site.webmanifest">
-   
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WM2F3H5B');</script>
-<!-- End Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WM2F3H5B');</script>
+    <!-- End Google Tag Manager -->
     
-        <!-- Enhanced Schema Markup for Local SEO -->
+    <!-- Enhanced Schema Markup for Local SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -190,7 +187,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             color: var(--dark);
             background: linear-gradient(135deg, #f5f7ff 0%, #e6e9ff 100%);
             overflow-x: hidden;
-            padding-top: 160px; /* Increased from 140px */
+            padding-top: 160px;
         }
 
         .container {
@@ -305,17 +302,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             width: 100%;
             z-index: 1000;
             background: transparent;
-            padding: 20px 0; /* Increased padding */
+            padding: 20px 0;
             transition: var(--transition);
-            min-height: 160px; /* Increased from 140px */
+            min-height: 160px;
             border-bottom: 3px solid rgba(255,255,255,0.2);
         }
 
         header.scrolled {
-            padding: 10px 0; /* Increased from 5px */
+            padding: 10px 0;
             background: rgba(26, 30, 33, 0.95);
             border-bottom: 3px solid var(--accent);
-            min-height: 100px; /* Added for scrolled state */
+            min-height: 100px;
         }
 
         nav {
@@ -324,7 +321,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             align-items: center;
             position: relative;
             z-index: 2;
-            height: 120px; /* Added fixed height */
+            height: 120px;
         }
 
         /* HEADER BACKGROUND - FIXED */
@@ -358,11 +355,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .logo-container {
             display: flex;
             align-items: center;
-            padding: 15px 20px; /* Increased padding */
+            padding: 15px 20px;
             border-radius: 4px;
             z-index: 2;
-            background: rgba(0,0,0,0.7); /* Increased opacity */
-            margin: 10px 0; /* Added margin */
+            background: rgba(0,0,0,0.7);
+            margin: 10px 0;
         }
 
         .logo-img {
@@ -388,15 +385,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .nav-links {
             display: flex;
             list-style: none;
-            background-color: rgba(0,0,0,0.7); /* Increased opacity */
-            padding: 12px 25px; /* Increased padding */
+            background-color: rgba(0,0,0,0.7);
+            padding: 12px 25px;
             border-radius: 50px;
             z-index: 2;
             backdrop-filter: blur(5px);
             flex-wrap: wrap;
             max-width: 600px;
             justify-content: flex-end;
-            margin: 10px 0; /* Added margin */
+            margin: 10px 0;
         }
 
         .nav-links li {
@@ -438,13 +435,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         /* Hero Section - FIXED */
         .hero {
-            padding: 80px 0 150px; /* Increased top padding */
+            padding: 80px 0 150px;
             background: var(--gradient);
             color: white;
             position: relative;
             overflow: hidden;
             text-align: center;
-            margin-top: -120px; /* Adjusted from -100px */
+            margin-top: -120px;
         }
 
         .hero:before {
@@ -502,475 +499,451 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             color: var(--primary);
         }
 
-        /* NEW: Cost Calculator */
-        .calculator-section {
-            background: white;
-            padding: 80px 0;
-        }
-
-        .calculator-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--light);
-            border-radius: var(--radius);
-            padding: 40px;
-            box-shadow: var(--shadow);
-        }
-
-        .calculator-step {
+        /* Section Visibility Control */
+        .page-section {
             display: none;
+        }
+
+        .page-section.active {
+            display: block;
             animation: fadeIn 0.5s ease;
         }
 
-        .calculator-step.active {
-            display: block;
-        }
-
-        .calculator-progress {
+        /* Service Tabs */
+        .service-tabs {
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 30px;
-            position: relative;
+            justify-content: center;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            gap: 15px;
         }
-
-        .calculator-progress:before {
-            content: '';
-            position: absolute;
-            top: 15px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: #eee;
-            z-index: 1;
+        
+        .service-tab {
+            padding: 15px 30px;
+            background: white;
+            border: 2px solid #eee;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
         }
-
-        .progress-step {
-            width: 30px;
-            height: 30px;
+        
+        .service-tab.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .service-content {
+            display: none;
+        }
+        
+        .service-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .service-benefits {
+            margin-top: 40px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .benefit-icon {
+            min-width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            color: white;
             border-radius: 50%;
-            background: #eee;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            z-index: 2;
-            font-weight: 600;
-            transition: var(--transition);
+            font-size: 1.5rem;
+            margin-right: 20px;
+            flex-shrink: 0;
         }
-
-        .progress-step.active {
-            background: var(--primary);
-            color: white;
-        }
-
-        .calculator-options {
+        
+        .process-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin: 25px 0;
-        }
-
-        .calculator-option {
-            padding: 15px;
-            background: white;
-            border: 2px solid #eee;
-            border-radius: var(--radius);
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .calculator-option:hover {
-            border-color: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .calculator-option.selected {
-            border-color: var(--primary);
-            background: rgba(67, 97, 238, 0.1);
-        }
-
-        .calculator-result {
-            background: var(--gradient);
-            color: white;
-            padding: 30px;
-            border-radius: var(--radius);
-            text-align: center;
-            margin-top: 30px;
-            display: none;
-        }
-
-        .calculator-result.show {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        .estimate-range {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin: 15px 0;
-        }
-
-        /* NEW: Color Visualizer */
-        .visualizer-section {
-            background: var(--light);
-            padding: 80px 0;
-        }
-
-        .visualizer-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .visualizer-preview {
-            height: 400px;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            position: relative;
-        }
-
-        .visualizer-preview img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .color-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            mix-blend-mode: multiply;
-        }
-
-        .color-picker {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .color-option {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: var(--transition);
-            border: 3px solid transparent;
-        }
-
-        .color-option:hover {
-            transform: scale(1.1);
-        }
-
-        .color-option.selected {
-            border-color: var(--dark);
-            transform: scale(1.1);
-        }
-
-        /* NEW: Before/After Slider */
-        .comparison-section {
-            background: white;
-            padding: 80px 0;
-        }
-
-        .comparison-slider {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .comparison-image {
-            width: 100%;
-            height: 500px;
-            position: relative;
-        }
-
-        .before, .after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .after {
-            width: 50%;
-            overflow: hidden;
-        }
-
-        .slider-handle {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 4px;
-            height: 100%;
-            background: white;
-            cursor: col-resize;
-            transform: translateX(-50%);
-        }
-
-        .slider-handle:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: white;
-            box-shadow: var(--shadow);
-        }
-
-        /* Service Areas Section */
-        .service-areas {
-            background: var(--light);
-            text-align: center;
-            padding: 60px 0;
-            position: relative;
-            z-index: 1;
-        }
-
-        .areas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
             margin-top: 40px;
         }
-
-        .area-card {
+        
+        .process-step {
+            text-align: center;
+            padding: 30px 20px;
             background: white;
-            padding: 25px 20px;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
             transition: var(--transition);
-            cursor: pointer;
         }
-
-        .area-card:hover {
-            transform: translateY(-5px);
+        
+        .process-step:hover {
+            transform: translateY(-10px);
             box-shadow: var(--shadow-lg);
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
             background: var(--gradient);
             color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 auto 20px;
         }
 
-        .area-card:hover h3 {
-            color: white;
+        /* Blog Styles */
+        .blog-categories {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            gap: 15px;
         }
-
-        .area-card h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        /* FAQ Section */
-        .faq-section {
+        
+        .blog-category-btn {
+            padding: 12px 25px;
             background: white;
-            padding: 80px 0;
-            position: relative;
-            z-index: 1;
-        }
-
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            margin-bottom: 25px;
-            border: 1px solid #eee;
-            border-radius: var(--radius);
-            overflow: hidden;
+            border: 2px solid #eee;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
             transition: var(--transition);
         }
-
-        .faq-item:hover {
-            box-shadow: var(--shadow);
+        
+        .blog-category-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
         }
-
-        .faq-question {
-            padding: 20px;
-            background: var(--light);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-        }
-
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
+        
+        .blog-article {
+            background: white;
+            border-radius: var(--radius);
             overflow: hidden;
-            transition: max-height 0.3s ease;
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+            transition: var(--transition);
+        }
+        
+        .blog-article:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .article-img {
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .article-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .blog-article:hover .article-img img {
+            transform: scale(1.05);
+        }
+        
+        .article-content {
+            padding: 40px;
+        }
+        
+        .article-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .article-date {
+            margin-right: 15px;
+        }
+        
+        .article-category {
+            background: var(--primary);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+        
+        .article-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .article-content p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .article-highlights {
+            background: var(--light);
+            padding: 25px;
+            border-radius: var(--radius);
+            margin: 30px 0;
+        }
+        
+        .article-highlights h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .article-highlights ul {
+            padding-left: 20px;
+        }
+        
+        .article-highlights li {
+            margin-bottom: 10px;
+        }
+        
+        .read-time {
+            display: flex;
+            align-items: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        .read-time i {
+            margin-right: 5px;
         }
 
-        .faq-item.active .faq-answer {
-            padding: 20px;
-            max-height: 500px;
-        }
-
-        /* About Section */
+        /* About Styles */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: center;
         }
-
+        
         .about-img {
             border-radius: var(--radius);
             overflow: hidden;
             box-shadow: var(--shadow-lg);
             transition: var(--transition);
         }
-
+        
         .about-img img {
             width: 100%;
             height: auto;
             display: block;
             transition: var(--transition);
         }
-
+        
         .about-img:hover {
             transform: translateY(-10px);
         }
-
-        .about-text h3 {
-            font-size: 2.2rem;
+        
+        .about-text h2 {
+            font-size: 2.5rem;
             margin-bottom: 25px;
             color: var(--primary-dark);
         }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 30px;
+        
+        .values-section {
+            padding: 80px 0;
+            background: var(--light);
         }
-
-        .skill {
-            background: rgba(67, 97, 238, 0.1);
-            color: var(--primary);
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            transition: var(--transition);
-            border: 1px solid rgba(67, 97, 238, 0.2);
-        }
-
-        .skill:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
-
-        /* Services Section */
-        .services-grid {
+        
+        .values-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
+            margin-top: 50px;
         }
-
-        .service-card {
+        
+        .value-card {
             background: white;
             padding: 40px 30px;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
-            transition: var(--transition);
             text-align: center;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            cursor: pointer;
-        }
-
-        .service-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: var(--gradient);
             transition: var(--transition);
-            z-index: -1;
         }
-
-        .service-card:hover {
+        
+        .value-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow-lg);
         }
-
-        .service-card:hover:before {
-            height: 100%;
-        }
-
-        .service-card:hover .service-icon,
-        .service-card:hover h3,
-        .service-card:hover p {
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
             color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 25px;
         }
-
-        .service-icon {
-            font-size: 3.5rem;
+        
+        .value-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+        
+        .team-section {
+            padding: 80px 0;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .team-member {
+            text-align: center;
+        }
+        
+        .member-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 25px;
+            border: 5px solid var(--primary);
+            box-shadow: var(--shadow);
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .team-member h3 {
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+        
+        .member-role {
             color: var(--primary);
-            margin-bottom: 25px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .certifications {
+            padding: 80px 0;
+            background: var(--light);
+        }
+        
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .cert-item {
+            background: white;
+            padding: 30px 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
             transition: var(--transition);
         }
-
-        .service-card h3 {
-            font-size: 1.6rem;
+        
+        .cert-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .cert-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
         }
 
-        /* Portfolio Section */
-        .portfolio-grid {
+        /* Gallery Styles */
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .gallery-filter {
+            padding: 12px 25px;
+            background: white;
+            border: 2px solid #eee;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .gallery-filter.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 30px;
+            margin-bottom: 80px;
         }
-
-        .portfolio-item {
+        
+        .gallery-item {
             border-radius: var(--radius);
             overflow: hidden;
             box-shadow: var(--shadow);
             position: relative;
             transition: var(--transition);
+            cursor: pointer;
         }
-
-        .portfolio-img {
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .gallery-img {
             height: 300px;
             overflow: hidden;
         }
-
-        .portfolio-img img {
+        
+        .gallery-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
         }
-
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .portfolio-item:hover .portfolio-img img {
+        
+        .gallery-item:hover .gallery-img img {
             transform: scale(1.1);
         }
-
-        .portfolio-overlay {
+        
+        .gallery-overlay {
             position: absolute;
             top: 0;
             left: 0;
@@ -987,328 +960,169 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             text-align: center;
             color: white;
         }
-
-        .portfolio-item:hover .portfolio-overlay {
+        
+        .gallery-item:hover .gallery-overlay {
             opacity: 1;
         }
-
-        .portfolio-overlay h3 {
+        
+        .gallery-overlay h3 {
             color: white;
             margin-bottom: 15px;
             font-size: 1.8rem;
         }
-
-        .portfolio-overlay p {
+        
+        .gallery-overlay p {
             color: rgba(255, 255, 255, 0.9);
         }
-
-        /* Testimonials */
-        .testimonials {
-            background: var(--gradient);
+        
+        .project-type {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary);
             color: white;
-            text-align: center;
-            padding: 150px 0;
-            margin-top: 0;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .before-after-section {
+            padding: 80px 0;
+            background: var(--light);
+        }
+        
+        .comparison-slider {
             position: relative;
-            z-index: 0;
-        }
-
-        .testimonials h2 {
-            color: white;
-        }
-
-        .testimonials h2:after {
-            background: white;
-        }
-
-        .testimonial-container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 30px;
-        }
-
-        .testimonial {
-            background: rgba(255, 255, 255, 0.1);
             border-radius: var(--radius);
-            padding: 40px;
-            margin: 30px 0;
-            position: relative;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-
-        .testimonial:before {
-            content: '"';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 5rem;
-            color: rgba(255, 255, 255, 0.2);
-            font-family: serif;
-            line-height: 1;
-        }
-
-        .testimonial p {
-            font-style: italic;
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.95);
-        }
-
-        .client-info {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        .client-avatar {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
             overflow: hidden;
-            margin-right: 20px;
-            border: 3px solid white;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-lg);
         }
-
-        .client-avatar img {
+        
+        .comparison-image {
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+        
+        .before, .after {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
-        .client-details h4 {
-            color: white;
-            margin-bottom: 5px;
-            font-size: 1.4rem;
+        
+        .after {
+            width: 50%;
+            overflow: hidden;
+        }
+        
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: white;
+            cursor: col-resize;
+            transform: translateX(-50%);
+        }
+        
+        .slider-handle:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: var(--shadow);
         }
 
-        .client-details p {
-            color: var(--accent);
-            font-size: 1rem;
-            margin: 0;
+        /* Contact Styles */
+        .contact-details-section {
+            padding: 80px 0;
+            background: var(--light);
         }
-
-        /* NEW: Trust Indicators */
-        .trust-indicators {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 60px 0;
-            gap: 30px;
-        }
-
-        .trust-item {
-            text-align: center;
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .trust-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        .trust-text {
-            font-size: 1.1rem;
-            color: var(--dark);
-        }
-
-        /* NEW: Sticky CTA */
-        .sticky-cta {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999;
-            display: none;
-        }
-
-        .sticky-cta.show {
-            display: block;
-            animation: fadeInUp 0.5s ease;
-        }
-
-        .sticky-cta .btn {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            padding: 12px 25px;
-            font-size: 0.9rem;
-        }
-
-        /* Contact Section */
-        .contact-container {
+        
+        .contact-methods {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
-
-        .contact-info h3 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: var(--primary-dark);
+        
+        .contact-method {
+            background: white;
+            padding: 40px 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
         }
-
-        .contact-details {
-            margin-bottom: 40px;
+        
+        .contact-method:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
         }
-
-        .contact-item {
-            display: flex;
-            margin-bottom: 25px;
-            align-items: flex-start;
-        }
-
-        .contact-icon {
-            min-width: 60px;
-            height: 60px;
+        
+        .contact-icon-large {
+            width: 80px;
+            height: 80px;
             background: var(--gradient);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            margin-right: 20px;
-            flex-shrink: 0;
-        }
-
-        .contact-text {
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: var(--dark);
-            cursor: pointer;
-            transition: var(--transition);
-            display: inline-block;
+            font-size: 2rem;
+            margin: 0 auto 25px;
         }
         
-        .contact-text:hover {
-            color: var(--primary);
-            transform: translateX(5px);
+        .contact-method h3 {
+            margin-bottom: 15px;
+            color: var(--primary-dark);
         }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
+        
+        .service-area-map {
+            padding: 80px 0;
         }
-
-        .social-links a {
+        
+        .map-container {
+            height: 500px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-top: 40px;
+        }
+        
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            background: #eee;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--primary);
-            color: white;
-            transition: var(--transition);
-            font-size: 1.3rem;
-            box-shadow: var(--shadow);
+            color: #666;
+            font-size: 1.2rem;
         }
-
-        .social-links a:hover {
-            background: var(--accent);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
+        
+        .faq-contact {
+            padding: 80px 0;
+            background: var(--light);
         }
-
-        .contact-form .form-group {
-            margin-bottom: 25px;
-        }
-
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form select {
-            width: 100%;
-            padding: 16px 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.1rem;
-            transition: var(--transition);
-            background: white;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus,
-        .contact-form select:focus {
-            border-color: var(--primary);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
-        }
-
-        .contact-form textarea {
-            height: 180px;
-            resize: vertical;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 100px 0 30px;
-            position: relative;
-            margin-top: 0;
-        }
-
-        .footer-content {
+        
+        .faq-contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
-        }
-
-        .footer-col h4 {
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 15px;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .footer-col h4:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--accent);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 15px;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            display: block;
-            padding: 5px 0;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--accent);
-            transform: translateX(5px);
-        }
-
-        .footer-links i {
-            margin-right: 10px;
-            width: 20px;
-            color: var(--accent);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 1rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
         }
 
         /* Animations */
@@ -1388,32 +1202,95 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
 
-        /* NEW: Service Selector */
-        .service-selector {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            margin: 40px 0;
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            display: none;
         }
 
-        .service-selector-btn {
+        .sticky-cta.show {
+            display: block;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        .sticky-cta .btn {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             padding: 12px 25px;
-            background: white;
-            border: 2px solid #eee;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 100px 0 30px;
+            position: relative;
+            margin-top: 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .footer-col h4:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            display: block;
+            padding: 5px 0;
             transition: var(--transition);
         }
 
-        .service-selector-btn.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
+        .footer-links a:hover {
+            color: var(--accent);
+            transform: translateX(5px);
         }
 
-        /* Responsive Design - FIXED */
+        .footer-links i {
+            margin-right: 10px;
+            width: 20px;
+            color: var(--accent);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
         @media (max-width: 1200px) {
             h1 {
                 font-size: 3.2rem;
@@ -1439,7 +1316,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         @media (max-width: 992px) {
             .about-content,
             .contact-container,
-            .visualizer-container {
+            .service-detail-grid,
+            .faq-contact-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -1459,7 +1337,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         @media (max-width: 768px) {
             body {
-                padding-top: 150px; /* Adjusted for mobile */
+                padding-top: 150px;
             }
             
             h1 {
@@ -1489,7 +1367,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 z-index: 1000;
                 border-right: 3px solid var(--accent);
                 max-width: none;
-                margin: 0; /* Reset margin for mobile */
+                margin: 0;
             }
             
             .nav-links.active {
@@ -1505,8 +1383,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
             
             .hero {
-                padding: 60px 0 100px; /* Adjusted for mobile */
-                margin-top: -110px; /* Adjusted for mobile */
+                padding: 60px 0 100px;
+                margin-top: -110px;
             }
             
             .hero-content {
@@ -1545,23 +1423,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
 
             #main-header {
-                min-height: 150px; /* Adjusted for mobile */
-                padding: 15px 0; /* Adjusted for mobile */
+                min-height: 150px;
+                padding: 15px 0;
             }
 
             nav {
-                height: 100px; /* Adjusted for mobile */
+                height: 100px;
             }
 
             .logo-container {
-                padding: 10px 15px; /* Adjusted for mobile */
-                margin: 5px 0; /* Adjusted for mobile */
+                padding: 10px 15px;
+                margin: 5px 0;
             }
         }
 
         @media (max-width: 576px) {
             body {
-                padding-top: 140px; /* Adjusted for small mobile */
+                padding-top: 140px;
             }
             
             h1 {
@@ -1581,8 +1459,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
             
             .hero {
-                padding: 50px 0 80px; /* Adjusted for small mobile */
-                margin-top: -100px; /* Adjusted for small mobile */
+                padding: 50px 0 80px;
+                margin-top: -100px;
             }
             
             .hero-content {
@@ -1606,12 +1484,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
 
             #main-header {
-                min-height: 140px; /* Adjusted for small mobile */
-                padding: 10px 0; /* Adjusted for small mobile */
+                min-height: 140px;
+                padding: 10px 0;
             }
 
             nav {
-                height: 90px; /* Adjusted for small mobile */
+                height: 90px;
             }
         }
     </style>
@@ -1644,12 +1522,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home" aria-label="Home">Home</a></li>
-                    <li><a href="#calculator" aria-label="Cost Calculator">Cost Calculator</a></li>
-                    <li><a href="#service-areas" aria-label="Service Areas">Service Areas</a></li>
-                    <li><a href="#about" aria-label="About Us">About</a></li>
                     <li><a href="#services" aria-label="Our Services">Services</a></li>
-                    <li><a href="#portfolio" aria-label="Our Portfolio">Portfolio</a></li>
-                    <li><a href="#faq" aria-label="FAQ">FAQ</a></li>
+                    <li><a href="#gallery" aria-label="Our Gallery">Gallery</a></li>
+                    <li><a href="#blog" aria-label="Blog">Blog</a></li>
+                    <li><a href="#about" aria-label="About Us">About</a></li>
                     <li><a href="#contact" aria-label="Contact Us">Contact</a></li>
                 </ul>
                 <div class="hamburger" aria-label="Menu">
@@ -1659,537 +1535,993 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <!-- Home Section -->
+    <section id="home" class="page-section hero active">
         <div class="container">
             <div class="hero-content">
                 <h1>Professional Painting & Drywall Services in Billings MT</h1>
                 <p>With over 15 years of professional experience, we're now serving Billings, Laurel, Shepherd and Yellowstone County. Quality interior painting, exterior painting, and drywall repair.</p>
                 <div class="hero-btns">
-                    <a href="#portfolio" class="btn pulse">View Our Billings Projects</a>
+                    <a href="#gallery" class="btn pulse">View Our Billings Projects</a>
                     <a href="#contact" class="btn btn-outline pulse">Free Estimate (406) 233-9557</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- NEW: Cost Calculator Section -->
-    <section id="calculator" class="calculator-section">
+    <!-- Services Section -->
+    <section id="services" class="page-section service-detail">
         <div class="container">
-            <h2>Estimate Your Project Cost</h2>
-            <p>Get an instant estimate for your painting or drywall project in Billings MT</p>
+            <div class="service-hero">
+                <h1>Professional Services for Billings Homes & Businesses</h1>
+                <p>Comprehensive painting, drywall, and stucco solutions with over 15 years of experience</p>
+            </div>
             
-            <div class="calculator-container">
-                <div class="calculator-progress">
-                    <div class="progress-step active">1</div>
-                    <div class="progress-step">2</div>
-                    <div class="progress-step">3</div>
-                    <div class="progress-step">4</div>
-                </div>
-                
-                <div class="calculator-step active" id="step-1">
-                    <h3>What type of service do you need?</h3>
-                    <div class="calculator-options">
-                        <div class="calculator-option" data-value="interior-painting">
-                            <i class="fas fa-paint-roller fa-2x"></i>
-                            <p>Interior Painting</p>
-                        </div>
-                        <div class="calculator-option" data-value="exterior-painting">
-                            <i class="fas fa-home fa-2x"></i>
-                            <p>Exterior Painting</p>
-                        </div>
-                        <div class="calculator-option" data-value="drywall-installation">
-                            <i class="fas fa-tools fa-2x"></i>
-                            <p>Drywall Installation</p>
-                        </div>
-                        <div class="calculator-option" data-value="drywall-repair">
-                            <i class="fas fa-hammer fa-2x"></i>
-                            <p>Drywall Repair</p>
-                        </div>
-                    </div>
-                    <button class="btn next-step" style="margin-top: 20px;">Next</button>
-                </div>
-                
-                <div class="calculator-step" id="step-2">
-                    <h3>What is the approximate size of your project?</h3>
-                    <div class="calculator-options">
-                        <div class="calculator-option" data-value="small">
-                            <i class="fas fa-expand-alt fa-2x"></i>
-                            <p>Small Room<br>(Under 200 sq ft)</p>
-                        </div>
-                        <div class="calculator-option" data-value="medium">
-                            <i class="fas fa-home fa-2x"></i>
-                            <p>Medium Room<br>(200-400 sq ft)</p>
-                        </div>
-                        <div class="calculator-option" data-value="large">
-                            <i class="fas fa-building fa-2x"></i>
-                            <p>Large Room<br>(400+ sq ft)</p>
-                        </div>
-                        <div class="calculator-option" data-value="whole-house">
-                            <i class="fas fa-city fa-2x"></i>
-                            <p>Whole House</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; margin-top: 20px;">
-                        <button class="btn btn-outline prev-step">Back</button>
-                        <button class="btn next-step">Next</button>
-                    </div>
-                </div>
-                
-                <div class="calculator-step" id="step-3">
-                    <h3>What is the current condition of the surfaces?</h3>
-                    <div class="calculator-options">
-                        <div class="calculator-option" data-value="good">
-                            <i class="fas fa-thumbs-up fa-2x"></i>
-                            <p>Good Condition<br>(Minor prep needed)</p>
-                        </div>
-                        <div class="calculator-option" data-value="average">
-                            <i class="fas fa-balance-scale fa-2x"></i>
-                            <p>Average Condition<br>(Some prep needed)</p>
-                        </div>
-                        <div class="calculator-option" data-value="poor">
-                            <i class="fas fa-exclamation-triangle fa-2x"></i>
-                            <p>Poor Condition<br>(Extensive prep needed)</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; margin-top: 20px;">
-                        <button class="btn btn-outline prev-step">Back</button>
-                        <button class="btn next-step">Next</button>
-                    </div>
-                </div>
-                
-                <div class="calculator-step" id="step-4">
-                    <h3>Where is your project located?</h3>
-                    <div class="calculator-options">
-                        <div class="calculator-option" data-value="billings">
-                            <p>Billings</p>
-                        </div>
-                        <div class="calculator-option" data-value="laurel">
-                            <p>Laurel</p>
-                        </div>
-                        <div class="calculator-option" data-value="shepherd">
-                            <p>Shepherd</p>
-                        </div>
-                        <div class="calculator-option" data-value="other">
-                            <p>Other Yellowstone County</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; margin-top: 20px;">
-                        <button class="btn btn-outline prev-step">Back</button>
-                        <button class="btn" id="calculate-estimate">Calculate Estimate</button>
-                    </div>
-                </div>
-                
-                <div class="calculator-result" id="calculator-result">
-                    <h3>Your Estimated Cost</h3>
-                    <div class="estimate-range" id="estimate-range">$1,200 - $2,800</div>
-                    <p>This is an approximate estimate based on your inputs. Contact us for a precise quote.</p>
-                    <a href="#contact" class="btn btn-outline" style="margin-top: 15px;">Get Exact Quote</a>
-                </div>
+            <div class="service-tabs">
+                <div class="service-tab active" data-tab="painting">Painting Services</div>
+                <div class="service-tab" data-tab="drywall">Drywall Services</div>
+                <div class="service-tab" data-tab="stucco">Stucco Services</div>
             </div>
-        </div>
-    </section>
-
-    <!-- NEW: Trust Indicators -->
-    <section class="trust-section">
-        <div class="container">
-            <div class="trust-indicators">
-                <div class="trust-item">
-                    <div class="trust-number">15+</div>
-                    <div class="trust-text">Years Experience</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-number">500+</div>
-                    <div class="trust-text">Projects Completed</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-number">4.9★</div>
-                    <div class="trust-text">Customer Rating</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-number">100%</div>
-                    <div class="trust-text">Satisfaction Guarantee</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Service Areas Section -->
-    <section id="service-areas" class="service-areas">
-        <div class="container">
-            <h2>Painting and Drywall Services in Billings Montana and Surrounding Areas</h2>
-            <p>Professional painting and drywall services with over 15 years of experience, now serving Billings, Laurel, Shepherd, Billings Heights, West End, Downtown Billings, and Yellowstone County. We're your local experts for all your painting and drywall needs.</p>
             
-            <div class="areas-grid">
-                <a href="https://www.facebook.com/LifetimeStucco321" target="_blank" class="area-card vibrant-accent">
-                    <h3>Billings</h3>
-                    <p>Full-service painting & drywall</p>
-                </a>
-                <a href="https://www.facebook.com/LifetimeStucco321" target="_blank" class="area-card vibrant-accent">
-                    <h3>Laurel</h3>
-                    <p>Residential & commercial projects</p>
-                </a>
-                <a href="https://www.facebook.com/LifetimeStucco321" target="_blank" class="area-card vibrant-accent">
-                    <h3>Shepherd</h3>
-                    <p>Interior & exterior services</p>
-                </a>
-                <a href="https://www.facebook.com/LifetimeStucco321" target="_blank" class="area-card vibrant-accent">
-                    <h3>Billings Heights</h3>
-                    <p>Emergency drywall repair</p>
-                </a>
-                <a href="https://www.facebook.com/LifetimeStucco321" target="_blank" class="area-card vibrant-accent">
-                    <h3>West End</h3>
-                    <p>New construction painting</p>
-                </a>
-                <a href="https://www.facebook.com/LifetimeStucco321" target="_blank" class="area-card vibrant-accent">
-                    <h3>Yellowstone County</h3>
-                    <p>Complete service coverage</p>
-                </a>
+            <!-- Painting Services -->
+            <div class="service-content active" id="painting">
+                <div class="service-detail-grid">
+                    <div>
+                        <h2>Professional Painting Services in Billings</h2>
+                        <p>Transform your space with our expert painting services. We use premium paints and proven techniques to deliver beautiful, lasting results for both interior and exterior projects throughout Billings and Yellowstone County.</p>
+                        
+                        <div class="service-benefits">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-paint-roller"></i>
+                                </div>
+                                <div>
+                                    <h4>Interior Painting</h4>
+                                    <p>Refresh your living spaces with precise interior painting that enhances your home's beauty and value.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div>
+                                    <h4>Exterior Painting</h4>
+                                    <p>Protect and beautify your property with weather-resistant exterior paints designed for Montana's climate.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <div>
+                                    <h4>Color Consultation</h4>
+                                    <p>Get expert advice on color selection that complements your space, lighting, and personal style.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7" alt="Professional painting services Billings MT" style="width: 100%; border-radius: var(--radius);">
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 60px;">Our Painting Process</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Consultation & Estimate</h4>
+                        <p>We assess your project needs and provide a detailed, transparent estimate.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Surface Preparation</h4>
+                        <p>Proper cleaning, sanding, and priming to ensure optimal paint adhesion.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Protection & Masking</h4>
+                        <p>We protect your furniture, floors, and fixtures before starting work.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Quality Application</h4>
+                        <p>Expert application using professional tools and techniques for flawless results.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h4>Final Inspection</h4>
+                        <p>We conduct a thorough quality check and clean up the work area completely.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- NEW: Color Visualizer Section -->
-    <section class="visualizer-section">
-        <div class="container">
-            <h2>Try Our Color Visualizer</h2>
-            <p>See how different colors would look in your space before making a decision</p>
             
-            <div class="visualizer-container">
-                <div class="visualizer-preview">
-                    <img src="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/client_risinger_build-30 (1).jpg">
-                    <div class="color-overlay" id="color-overlay"></div>
-                </div>
-                <div class="visualizer-controls">
-                    <h3>Choose a Color</h3>
-                    <div class="color-picker">
-                        <div class="color-option selected" style="background-color: #f8f9fa;" data-color="#f8f9fa"></div>
-                        <div class="color-option" style="background-color: #e9ecef;" data-color="#e9ecef"></div>
-                        <div class="color-option" style="background-color: #dee2e6;" data-color="#dee2e6"></div>
-                        <div class="color-option" style="background-color: #4361ee;" data-color="#4361ee"></div>
-                        <div class="color-option" style="background-color: #3a0ca3;" data-color="#3a0ca3"></div>
-                        <div class="color-option" style="background-color: #4cc9f0;" data-color="#4cc9f0"></div>
-                        <div class="color-option" style="background-color: #f72585;" data-color="#f72585"></div>
-                        <div class="color-option" style="background-color: #7209b7;" data-color="#7209b7"></div>
+            <!-- Drywall Services -->
+            <div class="service-content" id="drywall">
+                <div class="service-detail-grid">
+                    <div>
+                        <h2>Expert Drywall Services in Billings</h2>
+                        <p>From new construction to repairs, our drywall services deliver smooth, professional finishes. We specialize in drywall installation, repair, and texture matching for residential and commercial properties throughout Yellowstone County.</p>
+                        
+                        <div class="service-benefits">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <div>
+                                    <h4>Drywall Installation</h4>
+                                    <p>Professional installation for new construction, additions, and remodeling projects.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-hammer"></i>
+                                </div>
+                                <div>
+                                    <h4>Drywall Repair</h4>
+                                    <p>Expert repair of cracks, holes, water damage, and other drywall issues.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-text-height"></i>
+                                </div>
+                                <div>
+                                    <h4>Texture Matching</h4>
+                                    <p>Seamless texture replication to make repairs invisible in your existing walls.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p style="margin-top: 20px;">Don't see the color you want? We can match any color for your project.</p>
-                    <a href="#contact" class="btn" style="margin-top: 15px;">Consult Our Color Experts</a>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1621370664677-494c7093d6a9" alt="Professional drywall services Billings MT" style="width: 100%; border-radius: var(--radius);">
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 60px;">Common Drywall Issues We Solve</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Cracks & Seams</h4>
+                        <p>Repair visible cracks and seams for a smooth, uniform wall surface.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Holes & Damage</h4>
+                        <p>Fix holes from doorknobs, furniture, or accidental impacts.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Water Damage</h4>
+                        <p>Restore drywall affected by leaks, floods, or moisture issues.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Texture Issues</h4>
+                        <p>Match existing wall textures for seamless repairs and additions.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h4>Sagging Drywall</h4>
+                        <p>Address sagging or loose drywall panels for safety and aesthetics.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- NEW: Before/After Comparison Section -->
-    <section class="comparison-section">
-        <div class="container">
-            <h2>See Our Transformations</h2>
-            <p>Drag the slider to see before and after results of our Billings projects</p>
             
-            <div class="comparison-slider">
-                <div class="comparison-image">
-                    <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Before painting" class="before">
-                    <div class="after">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="After painting">
+            <!-- Stucco Services -->
+            <div class="service-content" id="stucco">
+                <div class="service-detail-grid">
+                    <div>
+                        <h2>Professional Stucco Services in Billings</h2>
+                        <p>Enhance your property's curb appeal and durability with our expert stucco services. We provide stucco installation, repair, and maintenance designed to withstand Montana's challenging weather conditions while maintaining beautiful aesthetics.</p>
+                        
+                        <div class="service-benefits">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-layer-group"></i>
+                                </div>
+                                <div>
+                                    <h4>Stucco Installation</h4>
+                                    <p>Professional application of traditional and synthetic stucco systems.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-wrench"></i>
+                                </div>
+                                <div>
+                                    <h4>Stucco Repair</h4>
+                                    <p>Expert repair of cracks, chips, and damage to restore your stucco's integrity.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div>
+                                    <h4>Stucco Maintenance</h4>
+                                    <p>Regular maintenance to protect your investment and extend stucco life.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="slider-handle"></div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1600585154340-6f29e3c01379" alt="Professional stucco services Billings MT" style="width: 100%; border-radius: var(--radius);">
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 60px;">Why Choose Stucco for Your Billings Home</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Durability</h4>
+                        <p>Stucco withstands Montana's harsh weather, including temperature extremes and precipitation.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Energy Efficiency</h4>
+                        <p>Excellent insulation properties help reduce heating and cooling costs.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Fire Resistance</h4>
+                        <p>Stucco provides superior fire protection compared to other siding materials.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Low Maintenance</h4>
+                        <p>Requires minimal upkeep while maintaining its appearance for decades.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h4>Aesthetic Appeal</h4>
+                        <p>Available in various textures and colors to complement any architectural style.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="faq-section">
+    <!-- Gallery Section -->
+    <section id="gallery" class="page-section">
         <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        How much does interior painting cost in Billings MT?
-                        <i class="fas fa-chevron-down"></i>
+            <div class="gallery-hero">
+                <h1>Our Billings MT Projects Gallery</h1>
+                <p>See examples of our painting, drywall, and stucco work transforming homes and businesses throughout Yellowstone County</p>
+            </div>
+            
+            <div class="gallery-filters">
+                <div class="gallery-filter active" data-filter="all">All Projects</div>
+                <div class="gallery-filter" data-filter="painting">Painting</div>
+                <div class="gallery-filter" data-filter="drywall">Drywall</div>
+                <div class="gallery-filter" data-filter="stucco">Stucco</div>
+                <div class="gallery-filter" data-filter="commercial">Commercial</div>
+                <div class="gallery-filter" data-filter="residential">Residential</div>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Painting Projects -->
+                <div class="gallery-item" data-categories="painting residential">
+                    <div class="project-type">Painting</div>
+                    <div class="gallery-img">
+                        <img src="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/20250719_195503-ANIMATION.gif" alt="Interior painting project in Billings Montana home">
                     </div>
-                    <div class="faq-answer">
-                        <p>Interior painting in Billings typically costs $2-6 per square foot depending on the project scope, paint quality, and surface preparation needed. We provide free estimates for all Billings area painting projects to give you an accurate price for your specific needs.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Do you offer emergency drywall repair in Billings?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, we offer same-day emergency drywall repair for water damage, holes, and other urgent issues throughout Billings and Yellowstone County. Our team can quickly respond to repair damage and prevent further issues.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What areas in Montana do you serve?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We serve Billings, Laurel, Shepherd, Billings Heights, West End, Downtown Billings, and all of Yellowstone County with professional painting and drywall services. We're your local Montana experts for all your home improvement needs.</p>
+                    <div class="gallery-overlay">
+                        <h3>Billings Interior Painting</h3>
+                        <p>Complete interior painting transformation for a West End Billings home</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        How long does an exterior painting project take in Montana?
-                        <i class="fas fa-chevron-down"></i>
+                
+                <div class="gallery-item" data-categories="painting commercial">
+                    <div class="project-type">Painting</div>
+                    <div class="gallery-img">
+                        <img src="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/20250720_210005-ANIMATION.gif" alt="Exterior painting project Billings MT commercial building">
                     </div>
-                    <div class="faq-answer">
-                        <p>Most exterior painting projects in the Billings area take 3-7 days depending on the size of your home and weather conditions. We work efficiently while maintaining the highest quality standards for lasting results that withstand Montana weather.</p>
+                    <div class="gallery-overlay">
+                        <h3>Billings Exterior Painting</h3>
+                        <p>Commercial building exterior painting and restoration in Downtown Billings</p>
                     </div>
                 </div>
+                
+                <div class="gallery-item" data-categories="painting residential">
+                    <div class="project-type">Painting</div>
+                    <div class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7" alt="Living room painting Billings MT">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Living Room Makeover</h3>
+                        <p>Complete living room transformation with accent wall in Laurel home</p>
+                    </div>
+                </div>
+                
+                <!-- Drywall Projects -->
+                <div class="gallery-item" data-categories="drywall residential">
+                    <div class="project-type">Drywall</div>
+                    <div class="gallery-img">
+                        <img src="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/20250720_210043-ANIMATION.gif" alt="Drywall installation project Billings Heights Montana">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Drywall Installation Billings</h3>
+                        <p>New drywall installation for office space renovation in Billings Heights</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-categories="drywall residential">
+                    <div class="project-type">Drywall</div>
+                    <div class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1621370664677-494c7093d6a9" alt="Drywall repair in Shepherd MT home">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Drywall Repair Shepherd</h3>
+                        <p>Water damage repair and texture matching in Shepherd residence</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-categories="drywall commercial">
+                    <div class="project-type">Drywall</div>
+                    <div class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1631679706909-8a5a5c4aace4" alt="Commercial drywall installation Billings">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Commercial Office Renovation</h3>
+                        <p>Complete drywall installation for new office space in Downtown Billings</p>
+                    </div>
+                </div>
+                
+                <!-- Stucco Projects -->
+                <div class="gallery-item" data-categories="stucco residential">
+                    <div class="project-type">Stucco</div>
+                    <div class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1600585154340-6f29e3c01379" alt="Stucco application Billings MT home">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Residential Stucco Application</h3>
+                        <p>Traditional stucco application on new construction in West End Billings</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-categories="stucco residential">
+                    <div class="project-type">Stucco</div>
+                    <div class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1577495508326-19a1b3cf65a7" alt="Stucco repair Yellowstone County">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Stucco Repair Project</h3>
+                        <p>Crack repair and resealing of stucco exterior in Yellowstone County home</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-categories="stucco commercial">
+                    <div class="project-type">Stucco</div>
+                    <div class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000" alt="Commercial stucco installation">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Commercial Stucco Installation</h3>
+                        <p>Synthetic stucco application on commercial building in Billings</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Before/After Section -->
+        <div class="before-after-section">
+            <div class="container">
+                <h2>See Our Transformations</h2>
+                <p>Drag the slider to see before and after results of our Billings projects</p>
+                
+                <div class="comparison-slider">
+                    <div class="comparison-image">
+                        <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Before painting" class="before">
+                        <div class="after">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="After painting">
+                        </div>
+                        <div class="slider-handle"></div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <p>Drag the slider to see the transformation of this Billings home's exterior</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Gallery CTA -->
+        <div class="gallery-cta">
+            <div class="container">
+                <h2>Ready to Transform Your Space?</h2>
+                <p>Let us bring the same quality and attention to detail to your painting, drywall, or stucco project</p>
+                <a href="#contact" class="btn" style="margin-top: 30px;">Get Your Free Estimate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="page-section">
+        <div class="container">
+            <div class="blog-hero">
+                <h1>Billings Painting, Drywall & Stucco Blog</h1>
+                <p>Expert advice, tips, and insights for homeowners in Billings MT and Yellowstone County</p>
+            </div>
+            
+            <div class="blog-categories">
+                <div class="blog-category-btn active" data-category="all">All Articles</div>
+                <div class="blog-category-btn" data-category="painting">Painting</div>
+                <div class="blog-category-btn" data-category="drywall">Drywall</div>
+                <div class="blog-category-btn" data-category="stucco">Stucco</div>
+                <div class="blog-category-btn" data-category="maintenance">Maintenance</div>
+            </div>
+            
+            <div class="blog-articles">
+                <!-- Painting Article -->
+                <article class="blog-article" data-categories="painting maintenance">
+                    <div class="article-img">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7" alt="Exterior painting in Montana climate">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">June 15, 2025</span>
+                            <span class="article-category">Painting</span>
+                        </div>
+                        <div class="read-time">
+                            <i class="far fa-clock"></i> 8 min read
+                        </div>
+                        <h2 id="painting-tips">5 Essential Tips for Exterior Painting in Montana's Climate</h2>
+                        <p>Montana's diverse weather conditions present unique challenges for exterior painting projects. From harsh winters with freezing temperatures to hot, dry summers, your home's exterior needs protection that can withstand these extremes. Here are five essential tips to ensure your exterior painting project in Billings stands the test of time.</p>
+                        
+                        <div class="article-highlights">
+                            <h4>Key Takeaways:</h4>
+                            <ul>
+                                <li>Choose the right paint formulation for Montana's temperature swings</li>
+                                <li>Proper surface preparation is critical for paint adhesion</li>
+                                <li>Timing your project correctly can make all the difference</li>
+                                <li>Quality materials pay for themselves in durability</li>
+                                <li>Professional application ensures optimal results</li>
+                            </ul>
+                        </div>
+                        
+                        <h3>1. Select the Right Paint for Montana's Climate</h3>
+                        <p>Not all exterior paints are created equal, especially when dealing with Montana's temperature extremes. Look for acrylic latex paints specifically formulated for variable climates. These paints contain flexible resins that expand and contract with temperature changes, preventing cracking and peeling.</p>
+                        <p>For homes in Billings, we recommend 100% acrylic paints with UV protection to prevent fading from the intense Montana sun. Semi-gloss or satin finishes tend to hold up better than flat finishes in our climate, as they're more resistant to moisture and easier to clean.</p>
+                        
+                        <h3>2. Timing Your Painting Project</h3>
+                        <p>The ideal painting window in Billings is typically from late May through early October. During this period, temperatures are consistently above 50°F, which is crucial for proper paint curing. Avoid painting when temperatures are expected to drop below 50°F within 48 hours of application.</p>
+                        <p>Watch the weather forecast carefully. Ideal painting conditions include moderate temperatures (60-85°F), low humidity, and no rain in the forecast for at least 24 hours after application. Early fall often provides excellent painting conditions in Yellowstone County.</p>
+                        
+                        <h3>3. Comprehensive Surface Preparation</h3>
+                        <p>Proper preparation accounts for 80% of a successful paint job. In Billings, where temperature fluctuations can cause significant expansion and contraction of building materials, thorough preparation is even more critical.</p>
+                        <p>Start with a thorough cleaning using a pressure washer to remove dirt, mildew, and chalked paint. Scrape away any loose or peeling paint and sand rough areas. For older homes in Billings Heights or the West End, check for lead paint and follow proper containment procedures if present.</p>
+                        
+                        <h3>4. Address Moisture Issues Before Painting</h3>
+                        <p>Montana's spring thaw and occasional heavy rains can lead to moisture problems that compromise paint adhesion. Before starting your exterior painting project, inspect your home for signs of moisture intrusion.</p>
+                        <p>Check for proper gutter function, ensure downspouts direct water away from the foundation, and look for any areas where water might be pooling near the house. Repair any damaged flashing around windows and doors, and consider adding extra caulking in vulnerable areas.</p>
+                        
+                        <h3>5. Professional Application Techniques</h3>
+                        <p>While DIY painting can be tempting, professional application ensures the job is done right the first time. Experienced painters understand how to work with Montana's conditions, including dealing with windy days that can blow dust onto wet paint.</p>
+                        <p>Professional painters also have access to commercial-grade equipment that provides a more uniform application and better coverage. They know how to "back-brush" after spraying to work the paint into the surface for maximum adhesion and durability.</p>
+                        
+                        <p>By following these tips and working with experienced professionals like Danny E Parsons Painting, your Billings home will have a beautiful, protective exterior finish that withstands Montana's challenging climate for years to come.</p>
+                        
+                        <a href="#contact" class="btn" style="margin-top: 30px;">Schedule Your Exterior Painting Consultation</a>
+                    </div>
+                </article>
+                
+                <!-- Drywall Article -->
+                <article class="blog-article" data-categories="drywall repair">
+                    <div class="article-img">
+                        <img src="https://images.unsplash.com/photo-1621370664677-494c7093d6a9" alt="Drywall repair in Billings homes">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">June 8, 2025</span>
+                            <span class="article-category">Drywall</span>
+                        </div>
+                        <div class="read-time">
+                            <i class="far fa-clock"></i> 6 min read
+                        </div>
+                        <h2 id="drywall-repair">How to Identify and Repair Common Drywall Issues in Your Billings Home</h2>
+                        <p>Drywall problems are common in Montana homes due to our climate's temperature swings and occasional seismic activity. Knowing how to identify different types of drywall damage and when to call a professional can save you time, money, and frustration. Here's our guide to common drywall issues in Billings homes and how to address them.</p>
+                        
+                        <div class="article-highlights">
+                            <h4>Common Drywall Problems in Billings:</h4>
+                            <ul>
+                                <li>Hairline cracks at corners and seams</li>
+                                <li>Nail pops from framing movement</li>
+                                <li>Water damage from leaks or humidity</li>
+                                <li>Holes from accidental impacts</li>
+                                <li>Texture matching challenges</li>
+                            </ul>
+                        </div>
+                        
+                        <h3>Understanding Drywall Cracks</h3>
+                        <p>Not all drywall cracks are created equal. Hairline cracks at the corners of doors and windows or where walls meet ceilings are often caused by normal settling and temperature-related expansion and contraction. These are typically cosmetic issues that can be easily repaired.</p>
+                        <p>However, if you notice cracks that are wider than 1/8 inch, diagonal cracks extending from corners of doors or windows, or cracks that seem to be growing, these could indicate more serious structural issues. In these cases, it's best to consult with a professional to determine the underlying cause before repairing the drywall.</p>
+                        
+                        <h3>Dealing with Nail Pops</h3>
+                        <p>Nail pops occur when the drywall nails or screws become visible through the finished surface, creating bumps or cracks. This is common in newer Billings homes as the framing lumber dries and settles, or in older homes due to temperature and humidity changes.</p>
+                        <p>To repair nail pops, drive a new drywall screw about 2 inches above or below the popped nail to pull the drywall tight against the framing. Then remove the popped nail, apply joint compound over both the old and new fasteners, and sand smooth once dry. This prevents the problem from recurring.</p>
+                        
+                        <h3>Addressing Water Damage</h3>
+                        <p>Water damage to drywall is a common issue in Billings, particularly in bathrooms, kitchens, and basements. The first sign is often discoloration or bubbling of the paint. If caught early, you may be able to save the drywall by addressing the moisture source and allowing the area to dry completely.</p>
+                        <p>However, if the drywall has become soft, crumbly, or shows signs of mold growth, replacement is necessary. It's important to fix the underlying water issue before repairing or replacing the drywall to prevent recurrence.</p>
+                        
+                        <h3>Repairing Holes and Dents</h3>
+                        <p>From doorknob dings to larger holes, drywall damage from impacts is common in active households. Small holes (less than 6 inches) can typically be repaired with a patch kit and joint compound. Larger holes may require cutting out the damaged section and installing a new piece of drywall.</p>
+                        <p>The key to invisible repairs is proper sanding and feathering of the joint compound. Apply multiple thin coats, sanding between each application, and feather the edges to blend seamlessly with the surrounding wall.</p>
+                        
+                        <h3>The Challenge of Texture Matching</h3>
+                        <p>One of the most difficult aspects of drywall repair in Billings homes is matching existing wall textures. From orange peel to knockdown to skip trowel, each texture requires specific techniques and tools to replicate.</p>
+                        <p>If you're attempting texture matching yourself, practice on a spare piece of drywall or inconspicuous area first. For important visible areas, consider hiring a professional who has experience with various texture types common in Yellowstone County homes.</p>
+                        
+                        <p>While minor drywall repairs can be DIY projects, complex issues or those involving potential structural problems are best left to professionals. Danny E Parsons Painting & Drywall has extensive experience with all types of drywall issues common in Billings area homes.</p>
+                        
+                        <a href="#contact" class="btn" style="margin-top: 30px;">Schedule Drywall Repair Consultation</a>
+                    </div>
+                </article>
+                
+                <!-- Stucco Article -->
+                <article class="blog-article" data-categories="stucco maintenance">
+                    <div class="article-img">
+                        <img src="https://images.unsplash.com/photo-1600585154340-6f29e3c01379" alt="Stucco maintenance for Montana homes">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">June 1, 2025</span>
+                            <span class="article-category">Stucco</span>
+                        </div>
+                        <div class="read-time">
+                            <i class="far fa-clock"></i> 7 min read
+                        </div>
+                        <h2 id="stucco-maintenance">Stucco Maintenance Guide for Montana Homes: Protecting Your Investment</h2>
+                        <p>Stucco is an excellent choice for Billings homes, offering durability, energy efficiency, and timeless aesthetic appeal. However, like any exterior finish, stucco requires proper maintenance to perform at its best in Montana's challenging climate. This guide will help you protect your stucco investment and address common issues before they become major problems.</p>
+                        
+                        <div class="article-highlights">
+                            <h4>Essential Stucco Maintenance Tasks:</h4>
+                            <ul>
+                                <li>Annual visual inspections</li>
+                                <li>Cleaning and removing organic growth</li>
+                                <li>Checking and maintaining caulking</li>
+                                <li>Addressing cracks promptly</li>
+                                <li>Protecting from moisture intrusion</li>
+                            </ul>
+                        </div>
+                        
+                        <h3>Regular Inspection is Key</h3>
+                        <p>Perform a thorough visual inspection of your stucco at least once a year, ideally in spring after the winter thaw. Look for hairline cracks, discoloration, bulging areas, or any signs of moisture damage. Pay special attention to areas around windows, doors, and where different materials meet, as these are common trouble spots.</p>
+                        <p>Use binoculars to inspect hard-to-reach areas, and consider hiring a professional for a comprehensive inspection every 3-5 years. Early detection of issues can prevent costly repairs down the road.</p>
+                        
+                        <h3>Proper Cleaning Techniques</h3>
+                        <p>Dirt, grime, and organic growth can accumulate on stucco surfaces over time, potentially leading to moisture retention and deterioration. For routine cleaning, use a garden hose with a spray nozzle to remove surface dirt. For more stubborn stains, use a soft-bristled brush and a mild detergent solution.</p>
+                        <p>Avoid pressure washing stucco, as the high pressure can damage the surface and force water behind the stucco system. If you must use a pressure washer, keep it on the lowest setting and maintain a safe distance from the surface.</p>
+                        
+                        <h3>Addressing Cracks Promptly</h3>
+                        <p>Hairline cracks (less than 1/8 inch) are common in stucco and are usually not a structural concern. However, they should be sealed to prevent water infiltration that can freeze and expand during Montana winters, causing further damage.</p>
+                        <p>For hairline cracks, use a high-quality elastomeric caulk designed for stucco applications. For larger cracks, it's best to consult with a stucco professional who can assess whether the crack indicates a more serious issue and perform the appropriate repair.</p>
+                        
+                        <h3>Maintaining Caulking and Flashings</h3>
+                        <p>The caulking around windows, doors, and other penetrations is crucial for preventing water intrusion behind your stucco system. Inspect these areas annually and recaulk as needed using a high-quality, UV-resistant elastomeric caulk.</p>
+                        <p>Similarly, check that flashings (metal pieces designed to direct water away from vulnerable areas) are intact and properly installed. Damaged or missing flashings can lead to significant water damage behind the stucco.</p>
+                        
+                        <h3>Managing Moisture and Drainage</h3>
+                        <p>Proper drainage is essential for stucco longevity. Ensure that gutters and downspouts are clear and functioning properly, directing water away from the foundation. The ground should slope away from your home, and sprinkler systems should be adjusted to avoid directly spraying stucco surfaces.</p>
+                        <p>In Billings, where we experience both heavy rains and dry periods, maintaining consistent moisture levels around your foundation can help prevent the soil expansion and contraction that can stress stucco systems.</p>
+                        
+                        <p>By following these maintenance guidelines, your stucco exterior will continue to protect and beautify your Billings home for decades. For complex repairs or if you're unsure about any aspect of stucco maintenance, don't hesitate to contact a professional stucco contractor with experience in Montana's unique climate conditions.</p>
+                        
+                        <a href="#contact" class="btn" style="margin-top: 30px;">Schedule Stucco Inspection</a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="page-section">
         <div class="container">
-            <h2>About Our Billings Painting Company</h2>
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1558&q=80" alt="Professional painting contractor Billings MT - Danny E Parsons team">
-                </div>
-                <div class="about-text">
-                    <h3>Professional Painting and Drywall Contractor in Billings</h3>
-                    <p>With over 15 years of professional painting and drywall experience, we've recently brought our expertise to the Billings Montana area. Our commitment to quality workmanship and customer satisfaction has been the foundation of our business for over a decade and a half.</p>
-                    <p>Our team of skilled Montana professionals is committed to delivering exceptional results that transform your space. We use only premium materials and proven techniques to ensure lasting beauty and durability for your Billings home or business.</p>
-                    <div class="skills">
-                        <span class="skill">Interior Painting Billings</span>
-                        <span class="skill">Exterior Painting Montana</span>
-                        <span class="skill">Drywall Installation</span>
-                        <span class="skill">Drywall Repair Billings</span>
-                        <span class="skill">Texture Matching</span>
-                        <span class="skill">Color Consultation</span>
-                    </div>
-                    <a href="#contact" class="btn vibrant-accent" style="margin-top: 25px;">Request Free Billings Estimate</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Our Painting & Drywall Services</h2>
-            
-            <!-- NEW: Service Selector -->
-            <div class="service-selector">
-                <button class="service-selector-btn active" data-service="all">All Services</button>
-                <button class="service-selector-btn" data-service="painting">Painting</button>
-                <button class="service-selector-btn" data-service="drywall">Drywall</button>
-                <button class="service-selector-btn" data-service="repair">Repair</button>
+            <div class="about-hero">
+                <h1>About Danny E Parsons Painting & Drywall</h1>
+                <p>Professional painting contractor serving Billings MT and Yellowstone County with over 15 years of experience</p>
             </div>
             
-            <div class="services-grid">
-                <a href="https://www.facebook.com/share/1FJqVaziDo/" target="_blank" class="service-card animate-on-scroll vibrant-accent" data-category="painting">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-roller"></i>
+            <div class="about-story">
+                <div class="about-content">
+                    <div class="about-img">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1558&q=80" alt="Professional painting contractor Billings MT - Danny E Parsons team">
                     </div>
-                    <h3>Interior Painting Billings</h3>
-                    <p>Professional interior painting services for Billings homes and businesses. We transform your space with precision and attention to detail using quality paints that last.</p>
-                </a>
-                <a href="https://www.facebook.com/share/19vKEwsMCA/" target="_blank" class="service-card animate-on-scroll vibrant-accent" data-category="painting">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Exterior Painting Montana</h3>
-                    <p>Protect and beautify your Billings property with our expert exterior painting services using weather-resistant paints designed for Montana conditions.</p>
-                </a>
-                <a href="https://www.facebook.com/share/r/17RGm3LpXr/" target="_blank" class="service-card animate-on-scroll vibrant-accent" data-category="drywall">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Drywall Installation</h3>
-                    <p>Professional drywall installation for new construction, renovations, and remodeling projects throughout Yellowstone County. Perfect finishes every time.</p>
-                </a>
-                <a href="https://www.facebook.com/share/r/1JBUfA8eYg/" target="_blank" class="service-card animate-on-scroll vibrant-accent" data-category="drywall repair">
-                    <div class="service-icon">
-                        <i class="fas fa-hammer"></i>
-                    </div>
-                    <h3>Drywall Repair Billings</h3>
-                    <p>Expert drywall repair services for cracks, holes, water damage, and other drywall issues. Emergency same-day service available for urgent repairs.</p>
-                </a>
-                <a href="https://www.facebook.com/share/v/17HhkfNNDm/" target="_blank" class="service-card animate-on-scroll vibrant-accent" data-category="drywall repair">
-                    <div class="service-icon">
-                        <i class="fas fa-text-height"></i>
-                    </div>
-                    <h3>Texture Matching</h3>
-                    <p>Seamless texture matching for drywall repairs. We replicate any texture pattern to make repairs invisible in your Billings home or business.</p>
-                </a>
-                <a href="#contact" class="service-card animate-on-scroll vibrant-accent" data-category="painting">
-                    <div class="service-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>Color Consultation</h3>
-                    <p>Professional color consultation to help you choose the perfect colors for your Billings home. We consider lighting, architecture, and your personal style.</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2>Our Billings MT Projects</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item animate-on-scroll">
-                    <div class="portfolio-img">
-                        <img src="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/20250719_195503-ANIMATION.gif" alt="Interior painting project in Billings Montana home">
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Billings Interior Painting</h3>
-                        <p>Complete interior painting transformation for a West End Billings home</p>
-                    </div>
-                </div>
-                <div class="portfolio-item animate-on-scroll">
-                    <div class="portfolio-img">
-                        <img src="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/20250720_210005-ANIMATION.gif" alt="Exterior painting project Billings MT commercial building">
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Billings Exterior Painting</h3>
-                        <p>Commercial building exterior painting and restoration in Downtown Billings</p>
-                    </div>
-                </div>
-                <div class="portfolio-item animate-on-scroll">
-                    <div class="portfolio-img">
-                        <img src="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/20250720_210043-ANIMATION.gif" alt="Drywall installation project Billings Heights Montana">
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Drywall Installation Billings</h3>
-                        <p>New drywall installation for office space renovation in Billings Heights</p>
+                    <div class="about-text">
+                        <h2>Our Billings Story</h2>
+                        <p>Danny E Parsons Painting & Drywall brings over 15 years of professional painting and drywall experience to the Billings Montana area. Founded on principles of quality craftsmanship, integrity, and customer satisfaction, our company has built a reputation for excellence in residential and commercial painting, drywall installation and repair, and stucco services.</p>
+                        <p>After establishing a successful track record in other markets, we recognized the need for high-quality, reliable painting and drywall services in Billings and Yellowstone County. We're proud to now serve this community with the same dedication to excellence that has defined our work for over a decade and a half.</p>
+                        <p>Our team of skilled Montana professionals is committed to delivering exceptional results that transform your space. We use only premium materials and proven techniques to ensure lasting beauty and durability for your Billings home or business.</p>
+                        <div class="skills">
+                            <span class="skill">Interior Painting Billings</span>
+                            <span class="skill">Exterior Painting Montana</span>
+                            <span class="skill">Drywall Installation</span>
+                            <span class="skill">Drywall Repair Billings</span>
+                            <span class="skill">Stucco Services</span>
+                            <span class="skill">Color Consultation</span>
+                        </div>
+                        <a href="#contact" class="btn vibrant-accent" style="margin-top: 25px;">Request Free Billings Estimate</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <h2>What Billings Clients Say</h2>
-            <div class="testimonial-container">
-                <div class="testimonial">
-                    <p>"Danny E Parsons Painting completely transformed our Billings home's interior. Their attention to detail in both the drywall repair and painting was remarkable. The team was professional, on-time, and cleaned up perfectly after the job."</p>
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson Billings MT client">
+            
+            <div class="values-section">
+                <div class="container">
+                    <h2 style="text-align: center; margin-bottom: 20px;">Our Company Values</h2>
+                    <p style="text-align: center; max-width: 700px; margin: 0 auto 50px;">These core principles guide everything we do, from initial consultation to project completion and beyond.</p>
+                    
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <h3>Quality Craftsmanship</h3>
+                            <p>We never cut corners and always use the highest quality materials and techniques to ensure lasting results that stand up to Montana's challenging climate.</p>
                         </div>
-                        <div class="client-details">
-                            <h4>Sarah Johnson</h4>
-                            <p>Homeowner, Billings MT</p>
+                        
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3>Customer Satisfaction</h3>
+                            <p>Your satisfaction is our top priority. We communicate clearly, respect your property, and ensure the final result exceeds your expectations.</p>
+                        </div>
+                        
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>Reliability</h3>
+                            <p>We show up on time, complete projects as scheduled, and stand behind our work with comprehensive warranties for your peace of mind.</p>
+                        </div>
+                        
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h3>Expertise</h3>
+                            <p>With over 15 years of experience, we have the knowledge and skills to handle any painting, drywall, or stucco challenge efficiently and effectively.</p>
+                        </div>
+                        
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h3>Environmental Responsibility</h3>
+                            <p>We use low-VOC paints when possible, properly dispose of materials, and implement practices that minimize our environmental impact.</p>
+                        </div>
+                        
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3>Community Focus</h3>
+                            <p>As part of the Billings community, we're committed to supporting local businesses and contributing to the growth and beautification of our area.</p>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial">
-                    <p>"We hired Danny for emergency drywall repair after water damage in our Laurel office. The texture matching was perfect and the painting was flawless. Highly recommended for any painting or drywall project in Yellowstone County!"</p>
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Thompson Laurel MT business owner">
+            </div>
+            
+            <div class="team-section">
+                <div class="container">
+                    <h2 style="text-align: center; margin-bottom: 20px;">Meet Our Team</h2>
+                    <p style="text-align: center; max-width: 700px; margin: 0 auto 50px;">Our skilled professionals bring expertise, dedication, and attention to detail to every project.</p>
+                    
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/FB_IMG_1636543853784.jpg" alt="Danny Parsons - Owner">
+                            </div>
+                            <h3>Danny Parsons</h3>
+                            <div class="member-role">Owner & Lead Contractor</div>
+                            <p>With over 15 years in the painting and drywall industry, Danny brings extensive expertise and a commitment to quality to every project. His hands-on approach ensures that each job meets his exacting standards.</p>
                         </div>
-                        <div class="client-details">
-                            <h4>Michael Thompson</h4>
-                            <p>Business Owner, Laurel MT</p>
+                        
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Painting Specialist">
+                            </div>
+                            <h3>Mike Johnson</h3>
+                            <div class="member-role">Painting Specialist</div>
+                            <p>Mike specializes in both interior and exterior painting with a keen eye for detail. His expertise in color theory and surface preparation ensures beautiful, lasting results for every Billings client.</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Drywall Expert">
+                            </div>
+                            <h3>Carlos Rodriguez</h3>
+                            <div class="member-role">Drywall Expert</div>
+                            <p>Carlos brings precision and skill to every drywall project, from new installation to complex repairs. His texture matching abilities make even the most extensive repairs virtually invisible.</p>
                         </div>
                     </div>
                 </div>
-                
-                <!-- NEW: Testimonial Form -->
-                <div class="testimonial-form" style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: var(--radius); margin-top: 40px;">
-                    <h3 style="color: white; margin-bottom: 20px;">Share Your Experience</h3>
-                    <form id="testimonialForm">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
-                            <input type="text" placeholder="Your Name" required style="padding: 12px; border-radius: 5px; border: none;">
-                            <input type="text" placeholder="Your City" required style="padding: 12px; border-radius: 5px; border: none;">
+            </div>
+            
+            <div class="certifications">
+                <div class="container">
+                    <h2 style="text-align: center; margin-bottom: 20px;">Our Certifications & Commitments</h2>
+                    <p style="text-align: center; max-width: 700px; margin: 0 auto 50px;">We maintain the highest standards in our industry through proper training, certification, and continuous education.</p>
+                    
+                    <div class="cert-grid">
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <h3>Licensed & Insured</h3>
+                            <p>Fully licensed contractor with comprehensive liability insurance and workers' compensation coverage.</p>
                         </div>
-                        <textarea placeholder="Your testimonial..." required style="width: 100%; padding: 12px; border-radius: 5px; border: none; min-height: 100px; margin-bottom: 15px;"></textarea>
-                        <button type="submit" class="btn btn-outline" style="background: transparent; color: white; border-color: white;">Submit Testimonial</button>
-                    </form>
+                        
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Bonded</h3>
+                            <p>Fully bonded for your financial protection and peace of mind on every project.</p>
+                        </div>
+                        
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h3>Quality Materials</h3>
+                            <p>We use premium paints, drywall materials, and stucco products from trusted manufacturers.</p>
+                        </div>
+                        
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Continuous Training</h3>
+                            <p>Ongoing education on new techniques, products, and safety protocols in our industry.</p>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 50px;">
+                        <a href="#contact" class="btn">Contact Us Today</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="page-section">
         <div class="container">
-            <h2>Contact Your Billings Painting Experts</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4>Location</h4>
-                                <div class="contact-text map-link" onclick="openMap()" role="button" tabindex="0">
-                                    Billings, MT 59102
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
+            <div class="contact-hero">
+                <h1>Contact Your Billings Painting Experts</h1>
+                <p>Get in touch for free estimates on painting, drywall, and stucco services in Billings MT and Yellowstone County</p>
+            </div>
+            
+            <div class="contact-details-section">
+                <div class="container">
+                    <h2 style="text-align: center; margin-bottom: 20px;">How Can We Help You?</h2>
+                    <p style="text-align: center; max-width: 700px; margin: 0 auto 50px;">Choose the contact method that works best for you. We're here to answer your questions and provide free estimates for your project.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon-large">
                                 <i class="fas fa-phone"></i>
                             </div>
-                            <div>
-                                <h4>Phone</h4>
-                                <div class="contact-text phone-link" onclick="callPhone()" role="button" tabindex="0">
-                                    (406) 233-9557
-                                </div>
-                            </div>
+                            <h3>Call Us</h3>
+                            <p>Speak directly with our team to discuss your project and get answers to your questions.</p>
+                            <a href="tel:4062339557" class="btn" style="margin-top: 20px;">Call (406) 233-9557</a>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon-large">
                                 <i class="fas fa-envelope"></i>
                             </div>
+                            <h3>Email Us</h3>
+                            <p>Send us details about your project and we'll get back to you with a customized estimate.</p>
+                            <a href="mailto:dannyedwardparsons@gmail.com" class="btn" style="margin-top: 20px;">Send Email</a>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon-large">
+                                <i class="fas fa-comment-alt"></i>
+                            </div>
+                            <h3>Contact Form</h3>
+                            <p>Fill out our online form with your project details and we'll respond promptly.</p>
+                            <a href="#contact-form" class="btn" style="margin-top: 20px;">Use Contact Form</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="contact-form" class="contact">
+                <div class="container">
+                    <h2 style="text-align: center; margin-bottom: 50px;">Send Us a Message</h2>
+                    <div class="contact-container">
+                        <div class="contact-info">
+                            <h3>Get In Touch</h3>
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Location</h4>
+                                        <div class="contact-text map-link" onclick="openMap()" role="button" tabindex="0">
+                                            Billings, MT 59102
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Phone</h4>
+                                        <div class="contact-text phone-link" onclick="callPhone()" role="button" tabindex="0">
+                                            (406) 233-9557
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Email</h4>
+                                        <div class="contact-text email-link" onclick="sendEmail()" role="button" tabindex="0">
+                                            dannyedwardparsons@gmail.com
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Business Hours</h4>
+                                        <div class="contact-text">
+                                            Mon-Sat: 9AM - 5PM<br>
+                                            Sun: 9AM - 2PM
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/share/1BiJ9kM9hC/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://x.com/D3P3G321?t=rljLkiASPqNsFUfH0_Tccw&s=09" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/lifetime.stucco.exteriors?igsh=MWNmaGwxcWc3MHdybQ==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/lifetimestuccoexteriors?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-form">
+                            <form id="contactForm" action="https://formspree.io/f/mblkddjg" method="POST">
+                                <input type="hidden" name="_subject" value="New Contact Form Submission - Danny E Parsons Painting Billings">
+                                <input type="hidden" name="_replyto" value="dannyedwardparsons@gmail.com">
+                                <div class="form-group">
+                                    <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" name="phone" placeholder="Your Phone" aria-label="Your Phone">
+                                </div>
+                                <div class="form-group">
+                                    <select name="service" aria-label="Service Interested In" required>
+                                        <option value="" disabled selected>Service Interested In</option>
+                                        <option value="interior-painting">Interior Painting</option>
+                                        <option value="exterior-painting">Exterior Painting</option>
+                                        <option value="drywall-installation">Drywall Installation</option>
+                                        <option value="drywall-repair">Drywall Repair</option>
+                                        <option value="stucco-installation">Stucco Installation</option>
+                                        <option value="stucco-repair">Stucco Repair</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select name="location" aria-label="Project Location" required>
+                                        <option value="" disabled selected>Project Location</option>
+                                        <option value="billings">Billings</option>
+                                        <option value="laurel">Laurel</option>
+                                        <option value="shepherd">Shepherd</option>
+                                        <option value="billings-heights">Billings Heights</option>
+                                        <option value="west-end">West End</option>
+                                        <option value="downtown-billings">Downtown Billings</option>
+                                        <option value="other-yellowstone">Other Yellowstone County</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" placeholder="Tell us about your project - include details like room sizes, current condition, and your timeline" required aria-label="Your Message"></textarea>
+                                </div>
+                                <button type="submit" class="btn vibrant-accent">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-area-map">
+                <div class="container">
+                    <h2 style="text-align: center; margin-bottom: 20px;">We Serve Billings and Yellowstone County</h2>
+                    <p style="text-align: center; max-width: 700px; margin: 0 auto;">Our professional painting, drywall, and stucco services are available throughout Billings, Laurel, Shepherd, and all of Yellowstone County.</p>
+                    
+                    <div class="map-container">
+                        <div class="map-placeholder">
                             <div>
-                                <h4>Email</h4>
-                                <div class="contact-text email-link" onclick="sendEmail()" role="button" tabindex="0">
-                                    dannyedwardparsons@gmail.com
+                                <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 20px; display: block;"></i>
+                                <p>Service Area: Billings MT and Yellowstone County</p>
+                                <p style="font-size: 1rem; margin-top: 10px;">Including Laurel, Shepherd, Billings Heights, West End</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="tel:4062339557" class="btn">Call to Confirm Service in Your Area</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-contact">
+                <div class="container">
+                    <h2 style="text-align: center; margin-bottom: 50px;">Frequently Asked Questions</h2>
+                    <div class="faq-contact-grid">
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    How quickly can you start my project?
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>We typically can schedule projects within 1-2 weeks of estimate approval. For emergency repairs like water damage, we offer same-day or next-day service whenever possible.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    Do you offer free estimates?
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Yes, we provide free, no-obligation estimates for all painting, drywall, and stucco projects in Billings and Yellowstone County. We'll visit your property to assess the project and provide a detailed quote.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    What payment methods do you accept?
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>We accept cash, check, and all major credit cards. For larger projects, we offer payment plans with 50% due at project start and 50% upon completion.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    Are you licensed and insured?
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Yes, we are fully licensed, bonded, and insured for your protection. We carry both liability insurance and workers' compensation coverage.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    Do you provide warranties on your work?
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Yes, we offer warranties on all our work. Painting projects come with a 2-year warranty, while drywall and stucco work includes a 5-year warranty against defects in workmanship.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    What areas do you serve?
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>We serve Billings, Laurel, Shepherd, Billings Heights, West End, Downtown Billings, and all of Yellowstone County with professional painting, drywall, and stucco services.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/share/1BiJ9kM9hC/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://x.com/D3P3G321?t=rljLkiASPqNsFUfH0_Tccw&s=09" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/lifetime.stucco.exteriors?igsh=MWNmaGwxcWc3MHdybQ==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/lifetimestuccoexteriors?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/mblkddjg" method="POST">
-                        <input type="hidden" name="_subject" value="New Contact Form Submission - Danny E Parsons Painting Billings">
-                        <input type="hidden" name="_replyto" value="dannyedwardparsons@gmail.com">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Your Phone" aria-label="Your Phone">
-                        </div>
-                        <div class="form-group">
-                            <select name="service" aria-label="Service Interested In">
-                                <option value="" disabled selected>Service Interested In</option>
-                                <option value="interior-painting">Interior Painting Billings</option>
-                                <option value="exterior-painting">Exterior Painting Montana</option>
-                                <option value="drywall-installation">Drywall Installation</option>
-                                <option value="drywall-repair">Drywall Repair Billings</option>
-                                <option value="emergency-repair">Emergency Drywall Repair</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message - Please include your location in Billings/Laurel/Shepherd" required aria-label="Your Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn vibrant-accent">Send Message to Billings Painter</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -2220,24 +2552,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#calculator">Cost Calculator</a></li>
-                        <li><a href="#service-areas">Service Areas</a></li>
-                        <li><a href="#about">About</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Services</h4>
                     <ul class="footer-links">
-                        <li><a href="https://www.facebook.com/share/1FJqVaziDo/">Interior Painting Billings</a></li>
-                        <li><a href="https://www.facebook.com/share/19vKEwsMCA/">Exterior Painting Montana</a></li>
-                        <li><a href="https://www.facebook.com/share/r/17RGm3LpXr/">Drywall Installation</a></li>
-                        <li><a href="https://www.facebook.com/share/r/1JBUfA8eYg/">Drywall Repair Billings</a></li>
-                        <li><a href="https://www.facebook.com/share/v/17HhkfNNDm/">Texture Matching</a></li>
-                        <li><a href="#contact">Color Consultation</a></li>
+                        <li><a href="#services">Interior Painting</a></li>
+                        <li><a href="#services">Exterior Painting</a></li>
+                        <li><a href="#services">Drywall Installation</a></li>
+                        <li><a href="#services">Drywall Repair</a></li>
+                        <li><a href="#services">Stucco Installation</a></li>
+                        <li><a href="#services">Stucco Repair</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -2258,24 +2588,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
     <script>
-        // Header scroll effect
-        const header = document.getElementById('main-header');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+        // Hash-based routing
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active');
+            });
             
-            // Show/hide sticky CTA
-            const stickyCta = document.getElementById('sticky-cta');
-            if (window.scrollY > 500) {
-                stickyCta.classList.add('show');
-            } else {
-                stickyCta.classList.remove('show');
+            // Show the target section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                
+                // Scroll to top of the page
+                window.scrollTo(0, 0);
             }
+        }
+
+        // Handle hash changes
+        function handleHashChange() {
+            const hash = window.location.hash.substring(1); // Remove the # symbol
+            if (hash) {
+                showSection(hash);
+            } else {
+                // If no hash, show the home section
+                showSection('home');
+            }
+        }
+
+        // Initial load
+        window.addEventListener('load', function() {
+            handleHashChange();
+            
+            // Header scroll effect
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                // Show/hide sticky CTA
+                const stickyCta = document.getElementById('sticky-cta');
+                if (window.scrollY > 500) {
+                    stickyCta.classList.add('show');
+                } else {
+                    stickyCta.classList.remove('show');
+                }
+            });
         });
-        
+
+        // Listen for hash changes
+        window.addEventListener('hashchange', handleHashChange);
+
+        // Navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                window.location.hash = targetId;
+            });
+        });
+
         // Hamburger menu functionality
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
@@ -2295,21 +2670,137 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 document.querySelector('.hamburger i').classList.remove('fa-times');
             });
         });
+
+        // Service Tab Functionality
+        const serviceTabs = document.querySelectorAll('.service-tab');
+        const serviceContents = document.querySelectorAll('.service-content');
         
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerHeight = header.offsetHeight;
-                    window.scrollTo({
-                        top: target.offsetTop - headerHeight + 20,
-                        behavior: 'smooth'
-                    });
-                }
+        serviceTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs and contents
+                serviceTabs.forEach(t => t.classList.remove('active'));
+                serviceContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
             });
         });
+
+        // Blog Category Filtering
+        const categoryBtns = document.querySelectorAll('.blog-category-btn');
+        const blogArticles = document.querySelectorAll('.blog-article');
+        
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Get filter value
+                const filter = this.getAttribute('data-category');
+                
+                // Filter blog articles
+                blogArticles.forEach(article => {
+                    if (filter === 'all') {
+                        article.style.display = 'block';
+                    } else {
+                        const categories = article.getAttribute('data-categories');
+                        if (categories.includes(filter)) {
+                            article.style.display = 'block';
+                        } else {
+                            article.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+
+        // Gallery Filtering
+        const galleryFilters = document.querySelectorAll('.gallery-filter');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        galleryFilters.forEach(filter => {
+            filter.addEventListener('click', function() {
+                // Remove active class from all filters
+                galleryFilters.forEach(f => f.classList.remove('active'));
+                
+                // Add active class to clicked filter
+                this.classList.add('active');
+                
+                // Get filter value
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Filter gallery items
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all') {
+                        item.style.display = 'block';
+                    } else {
+                        const categories = item.getAttribute('data-categories');
+                        if (categories.includes(filterValue)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+
+        // Before/After Slider
+        const comparisonSlider = document.querySelector('.comparison-slider');
+        if (comparisonSlider) {
+            const sliderHandle = document.querySelector('.slider-handle');
+            const afterImage = document.querySelector('.after');
+            
+            let isResizing = false;
+            
+            sliderHandle.addEventListener('mousedown', function(e) {
+                isResizing = true;
+                document.addEventListener('mousemove', handleResize);
+                document.addEventListener('mouseup', stopResize);
+            });
+            
+            sliderHandle.addEventListener('touchstart', function(e) {
+                isResizing = true;
+                document.addEventListener('touchmove', handleResize);
+                document.addEventListener('touchend', stopResize);
+            });
+            
+            function handleResize(e) {
+                if (!isResizing) return;
+                
+                let clientX;
+                if (e.type === 'mousemove') {
+                    clientX = e.clientX;
+                } else if (e.type === 'touchmove') {
+                    clientX = e.touches[0].clientX;
+                }
+                
+                const sliderRect = comparisonSlider.getBoundingClientRect();
+                const sliderWidth = sliderRect.width;
+                const sliderLeft = sliderRect.left;
+                
+                let newWidth = ((clientX - sliderLeft) / sliderWidth) * 100;
+                
+                // Constrain between 0 and 100
+                newWidth = Math.max(0, Math.min(100, newWidth));
+                
+                afterImage.style.width = `${newWidth}%`;
+                sliderHandle.style.left = `${newWidth}%`;
+            }
+            
+            function stopResize() {
+                isResizing = false;
+                document.removeEventListener('mousemove', handleResize);
+                document.removeEventListener('touchmove', handleResize);
+            }
+        }
 
         // FAQ functionality
         document.querySelectorAll('.faq-question').forEach(question => {
@@ -2318,7 +2809,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 item.classList.toggle('active');
             });
         });
-
+        
         // Form submission
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
@@ -2331,19 +2822,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 }, 1000);
             });
         }
-
-        // Animation on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        document.querySelectorAll('.animate-on-scroll').forEach(element => {
-            observer.observe(element);
-        });
         
         // Contact functions
         function openMap() {
@@ -2362,246 +2840,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             window.location.href = "mailto:dannyedwardparsons@gmail.com?subject=Painting%20Service%20Inquiry%20Billings%20MT";
         }
 
-        // NEW: Cost Calculator Functionality
-        const calculatorSteps = document.querySelectorAll('.calculator-step');
-        const progressSteps = document.querySelectorAll('.progress-step');
-        const calculatorOptions = document.querySelectorAll('.calculator-option');
-        const nextButtons = document.querySelectorAll('.next-step');
-        const prevButtons = document.querySelectorAll('.prev-step');
-        const calculateButton = document.getElementById('calculate-estimate');
-        const calculatorResult = document.getElementById('calculator-result');
-        const estimateRange = document.getElementById('estimate-range');
-        
-        let currentStep = 0;
-        let calculatorData = {
-            service: '',
-            size: '',
-            condition: '',
-            location: ''
-        };
-        
-        // Initialize calculator options
-        calculatorOptions.forEach(option => {
-            option.addEventListener('click', function() {
-                // Remove selected class from siblings
-                const siblings = this.parentElement.querySelectorAll('.calculator-option');
-                siblings.forEach(sibling => {
-                    sibling.classList.remove('selected');
-                });
-                
-                // Add selected class to clicked option
-                this.classList.add('selected');
-                
-                // Store the selected value
-                const stepId = this.closest('.calculator-step').id;
-                const value = this.getAttribute('data-value');
-                
-                if (stepId === 'step-1') calculatorData.service = value;
-                if (stepId === 'step-2') calculatorData.size = value;
-                if (stepId === 'step-3') calculatorData.condition = value;
-                if (stepId === 'step-4') calculatorData.location = value;
-            });
-        });
-        
-        // Next step functionality
-        nextButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                if (currentStep < calculatorSteps.length - 1) {
-                    // Validate current step has selection
-                    const currentStepElement = calculatorSteps[currentStep];
-                    const selectedOption = currentStepElement.querySelector('.calculator-option.selected');
-                    
-                    if (!selectedOption) {
-                        alert('Please select an option to continue');
-                        return;
-                    }
-                    
-                    // Move to next step
-                    calculatorSteps[currentStep].classList.remove('active');
-                    progressSteps[currentStep].classList.remove('active');
-                    
-                    currentStep++;
-                    
-                    calculatorSteps[currentStep].classList.add('active');
-                    progressSteps[currentStep].classList.add('active');
+        // Animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
                 }
             });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.animate-on-scroll').forEach(element => {
+            observer.observe(element);
         });
-        
-        // Previous step functionality
-        prevButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                if (currentStep > 0) {
-                    calculatorSteps[currentStep].classList.remove('active');
-                    progressSteps[currentStep].classList.remove('active');
-                    
-                    currentStep--;
-                    
-                    calculatorSteps[currentStep].classList.add('active');
-                    progressSteps[currentStep].classList.add('active');
-                }
-            });
-        });
-        
-        // Calculate estimate
-        calculateButton.addEventListener('click', function() {
-            // Validate final step has selection
-            const currentStepElement = calculatorSteps[currentStep];
-            const selectedOption = currentStepElement.querySelector('.calculator-option.selected');
-            
-            if (!selectedOption) {
-                alert('Please select an option to continue');
-                return;
-            }
-            
-            // Calculate estimate based on selections
-            let basePrice = 0;
-            
-            // Service base prices
-            if (calculatorData.service === 'interior-painting') basePrice = 1500;
-            else if (calculatorData.service === 'exterior-painting') basePrice = 3000;
-            else if (calculatorData.service === 'drywall-installation') basePrice = 2000;
-            else if (calculatorData.service === 'drywall-repair') basePrice = 500;
-            
-            // Size multipliers
-            if (calculatorData.size === 'small') basePrice *= 0.7;
-            else if (calculatorData.size === 'medium') basePrice *= 1;
-            else if (calculatorData.size === 'large') basePrice *= 1.5;
-            else if (calculatorData.size === 'whole-house') basePrice *= 3;
-            
-            // Condition multipliers
-            if (calculatorData.condition === 'good') basePrice *= 1;
-            else if (calculatorData.condition === 'average') basePrice *= 1.2;
-            else if (calculatorData.condition === 'poor') basePrice *= 1.5;
-            
-            // Calculate range (20% variance)
-            const lowEstimate = Math.round(basePrice * 0.8);
-            const highEstimate = Math.round(basePrice * 1.2);
-            
-            // Display result
-            estimateRange.textContent = `$${lowEstimate} - $${highEstimate}`;
-            calculatorResult.classList.add('show');
-            
-            // Scroll to result
-            calculatorResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        });
-        
-        // NEW: Color Visualizer
-        const colorOptions = document.querySelectorAll('.color-option');
-        const colorOverlay = document.getElementById('color-overlay');
-        
-        colorOptions.forEach(option => {
-            option.addEventListener('click', function() {
-                // Remove selected class from all options
-                colorOptions.forEach(opt => opt.classList.remove('selected'));
-                
-                // Add selected class to clicked option
-                this.classList.add('selected');
-                
-                // Get color value
-                const color = this.getAttribute('data-color');
-                
-                // Apply color to overlay
-                colorOverlay.style.backgroundColor = color;
-            });
-        });
-        
-        // NEW: Before/After Slider
-        const comparisonSlider = document.querySelector('.comparison-slider');
-        const sliderHandle = document.querySelector('.slider-handle');
-        const afterImage = document.querySelector('.after');
-        
-        let isResizing = false;
-        
-        sliderHandle.addEventListener('mousedown', function(e) {
-            isResizing = true;
-            document.addEventListener('mousemove', handleResize);
-            document.addEventListener('mouseup', stopResize);
-        });
-        
-        sliderHandle.addEventListener('touchstart', function(e) {
-            isResizing = true;
-            document.addEventListener('touchmove', handleResize);
-            document.addEventListener('touchend', stopResize);
-        });
-        
-        function handleResize(e) {
-            if (!isResizing) return;
-            
-            let clientX;
-            if (e.type === 'mousemove') {
-                clientX = e.clientX;
-            } else if (e.type === 'touchmove') {
-                clientX = e.touches[0].clientX;
-            }
-            
-            const sliderRect = comparisonSlider.getBoundingClientRect();
-            const sliderWidth = sliderRect.width;
-            const sliderLeft = sliderRect.left;
-            
-            let newWidth = ((clientX - sliderLeft) / sliderWidth) * 100;
-            
-            // Constrain between 0 and 100
-            newWidth = Math.max(0, Math.min(100, newWidth));
-            
-            afterImage.style.width = `${newWidth}%`;
-            sliderHandle.style.left = `${newWidth}%`;
-        }
-        
-        function stopResize() {
-            isResizing = false;
-            document.removeEventListener('mousemove', handleResize);
-            document.removeEventListener('touchmove', handleResize);
-        }
-        
-        // NEW: Service Selector
-        const serviceSelectorBtns = document.querySelectorAll('.service-selector-btn');
-        const serviceCards = document.querySelectorAll('.service-card');
-        
-        serviceSelectorBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                // Remove active class from all buttons
-                serviceSelectorBtns.forEach(b => b.classList.remove('active'));
-                
-                // Add active class to clicked button
-                this.classList.add('active');
-                
-                // Get filter value
-                const filter = this.getAttribute('data-service');
-                
-                // Filter service cards
-                serviceCards.forEach(card => {
-                    if (filter === 'all') {
-                        card.style.display = 'block';
-                    } else {
-                        const category = card.getAttribute('data-category');
-                        if (category.includes(filter)) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    }
-                });
-            });
-        });
-        
-        // Voice search optimization - track voice search queries
-        if ('webkitSpeechRecognition' in window) {
-            const recognition = new webkitSpeechRecognition();
-            recognition.continuous = false;
-            recognition.interimResults = false;
-            
-            recognition.onresult = function(event) {
-                const transcript = event.results[0][0].transcript.toLowerCase();
-                if (transcript.includes('painting contractor') || transcript.includes('drywall repair')) {
-                    // Track voice search for painting/drywall services
-                    gtag('event', 'voice_search', {
-                        'search_term': transcript,
-                        'location': 'Billings MT'
-                    });
-                }
-            };
-        }
     </script>
 </body>
 </html>
