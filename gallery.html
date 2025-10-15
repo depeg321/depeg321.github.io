@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Billings MT Painting & Drywall Projects | Project Gallery</title>
+    <meta name="description" content="View our portfolio of painting, drywall, and stucco projects in Billings MT and Yellowstone County. See before/after transformations and completed work.">
+    
+    <!-- Same CSS and meta tags as index.html -->
+    
+    <style>
+        /* Additional styles for gallery page */
+        .gallery-hero {
+            background: var(--gradient);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .gallery-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .gallery-filter {
+            padding: 12px 25px;
+            background: white;
+            border: 2px solid #eee;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .gallery-filter.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        
+        .gallery-item {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .gallery-img {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .gallery-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-img img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(67, 97, 238, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: var(--transition);
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-overlay h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .gallery-overlay p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .project-type {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .before-after-section {
+            padding: 80px 0;
+            background: var(--light);
+        }
+        
+        .comparison-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .comparison-image {
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+        
+        .before, .after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .after {
+            width: 50%;
+            overflow: hidden;
+        }
+        
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: white;
+            cursor: col-resize;
+            transform: translateX(-50%);
+        }
+        
+        .slider-handle:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: var(--shadow);
+        }
+        
+        .gallery-cta {
+            text-align: center;
+            padding: 80px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Same header and mobile menu as index.html -->
+    
+    <!-- Gallery Hero Section -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>Our Billings MT Projects Gallery</h1>
+            <p>See examples of our painting, drywall, and stucco work transforming homes and businesses throughout Yellowstone County</p>
+        </div>
+    </section>
+    
+    <!-- Gallery Filters -->
+    <section>
+        <div class="container">
+            <div class="gallery-filters">
+                <div class="gallery-filter active" data-filter="all">All Projects</div>
+                <div class="gallery-filter" data-filter="painting">Painting</div>
+                <div class="gallery-filter" data-filter="drywall">Drywall</div>
+                <div class="gallery-filter" data-filter="stucco">Stucco</div>
+                <div class="gallery-filter" data-filter="commercial">Commercial</div>
+                <div class="gallery-filter" data-filter="residential">Residential</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Grid -->
+    <section>
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Painting Projects -->
+                <div class="gallery-item" data-categories="painting residential">
+                    <div class="project-type">Painting</div>
+                    <div class="gallery-img">
+                        <img src="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/20250719_195503-ANIMATION.gif" alt="Interior painting project in Billings Montana home">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Billings Interior Painting</h3>
+                        <p>Complete interior painting transformation for a West End Billings home</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-categories="painting commercial">
+                    <div class="project-type">Painting</div>
+                    <div class="gallery-img">
+                        <img src="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/20250720_210005-ANIMATION.gif" alt="Exterior painting project Billings MT commercial building">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Billings Exterior Painting</h3>
+                        <p>Commercial building exterior painting and restoration in Downtown Billings</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-categories="painting residential">
+                    <div class="project-type">Painting</div>
+                    <div class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7" alt="Living room painting Billings MT">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Living Room Makeover</h3>
+                        <p>Complete living room transformation with accent wall in Laurel home</p>
+                    </div>
+                </div>
+                
+                <!-- Drywall Projects -->
+                <div class="gallery-item" data-categories="drywall residential">
+                    <div class="project-type">Drywall</div>
+                    <div class="gallery-img">
+                        <img src="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/20250720_210043-ANIMATION.gif" alt="Drywall installation project Billings Heights Montana">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Drywall Installation Billings</h3>
+                        <p>New drywall installation for office space renovation in Billings Heights</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-categories="drywall residential">
+                    <div class="project-type">Drywall</div>
+                    <div class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1621370664677-494c7093d6a9" alt="Drywall repair in Shepherd MT home">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Drywall Repair Shepherd</h3>
+                        <p>Water damage repair and texture matching in Shepherd residence</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-categories="drywall commercial">
+                    <div class="project-type">Drywall</div>
+                    <div class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1631679706909-8a5a5c4aace4" alt="Commercial drywall installation Billings">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Commercial Office Renovation</h3>
+                        <p>Complete drywall installation for new office space in Downtown Billings</p>
+                    </div>
+                </div>
+                
+                <!-- Stucco Projects -->
+                <div class="gallery-item" data-categories="stucco residential">
+                    <div class="project-type">Stucco</div>
+                    <div class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1600585154340-6f29e3c01379" alt="Stucco application Billings MT home">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Residential Stucco Application</h3>
+                        <p>Traditional stucco application on new construction in West End Billings</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-categories="stucco residential">
+                    <div class="project-type">Stucco</div>
+                    <div class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1577495508326-19a1b3cf65a7" alt="Stucco repair Yellowstone County">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Stucco Repair Project</h3>
+                        <p>Crack repair and resealing of stucco exterior in Yellowstone County home</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-categories="stucco commercial">
+                    <div class="project-type">Stucco</div>
+                    <div class="gallery-img">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000" alt="Commercial stucco installation">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Commercial Stucco Installation</h3>
+                        <p>Synthetic stucco application on commercial building in Billings</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Before/After Section -->
+    <section class="before-after-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">See Our Transformations</h2>
+            
+            <div class="comparison-slider">
+                <div class="comparison-image">
+                    <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Before painting" class="before">
+                    <div class="after">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="After painting">
+                    </div>
+                    <div class="slider-handle"></div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <p>Drag the slider to see the transformation of this Billings home's exterior</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery CTA -->
+    <section class="gallery-cta">
+        <div class="container">
+            <h2>Ready to Transform Your Space?</h2>
+            <p>Let us bring the same quality and attention to detail to your painting, drywall, or stucco project</p>
+            <a href="contact.html" class="btn" style="margin-top: 30px;">Get Your Free Estimate</a>
+        </div>
+    </section>
+    
+    <!-- Same footer as index.html -->
+    
+    <script>
+        // Gallery Filtering
+        const galleryFilters = document.querySelectorAll('.gallery-filter');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        galleryFilters.forEach(filter => {
+            filter.addEventListener('click', function() {
+                // Remove active class from all filters
+                galleryFilters.forEach(f => f.classList.remove('active'));
+                
+                // Add active class to clicked filter
+                this.classList.add('active');
+                
+                // Get filter value
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Filter gallery items
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all') {
+                        item.style.display = 'block';
+                    } else {
+                        const categories = item.getAttribute('data-categories');
+                        if (categories.includes(filterValue)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+        
+        // Before/After Slider
+        const comparisonSlider = document.querySelector('.comparison-slider');
+        const sliderHandle = document.querySelector('.slider-handle');
+        const afterImage = document.querySelector('.after');
+        
+        let isResizing = false;
+        
+        sliderHandle.addEventListener('mousedown', function(e) {
+            isResizing = true;
+            document.addEventListener('mousemove', handleResize);
+            document.addEventListener('mouseup', stopResize);
+        });
+        
+        sliderHandle.addEventListener('touchstart', function(e) {
+            isResizing = true;
+            document.addEventListener('touchmove', handleResize);
+            document.addEventListener('touchend', stopResize);
+        });
+        
+        function handleResize(e) {
+            if (!isResizing) return;
+            
+            let clientX;
+            if (e.type === 'mousemove') {
+                clientX = e.clientX;
+            } else if (e.type === 'touchmove') {
+                clientX = e.touches[0].clientX;
+            }
+            
+            const sliderRect = comparisonSlider.getBoundingClientRect();
+            const sliderWidth = sliderRect.width;
+            const sliderLeft = sliderRect.left;
+            
+            let newWidth = ((clientX - sliderLeft) / sliderWidth) * 100;
+            
+            // Constrain between 0 and 100
+            newWidth = Math.max(0, Math.min(100, newWidth));
+            
+            afterImage.style.width = `${newWidth}%`;
+            sliderHandle.style.left = `${newWidth}%`;
+        }
+        
+        function stopResize() {
+            isResizing = false;
+            document.removeEventListener('mousemove', handleResize);
+            document.removeEventListener('touchmove', handleResize);
+        }
+        
+        // All other JavaScript functions (mobile menu, etc.)
+    </script>
+</body>
+</html>
