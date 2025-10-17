@@ -172,10 +172,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Calendly Integration -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    
     <style>
         :root {
             --primary: #4361ee;
@@ -680,281 +676,6 @@
             border-color: var(--primary);
         }
 
-        /* NEW: Enhanced Gallery Styles */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 80px;
-        }
-        
-        .gallery-item {
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            position: relative;
-            transition: var(--transition);
-            cursor: pointer;
-            height: 300px;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .gallery-img {
-            height: 100%;
-            overflow: hidden;
-        }
-        
-        .gallery-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-        
-        .gallery-item:hover .gallery-img img {
-            transform: scale(1.1);
-        }
-        
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(67, 97, 238, 0.9);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: var(--transition);
-            padding: 30px;
-            text-align: center;
-            color: white;
-        }
-        
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-        
-        .gallery-overlay h3 {
-            color: white;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-        }
-        
-        .gallery-overlay p {
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        .project-type {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--primary);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            z-index: 2;
-        }
-        
-        /* NEW: Interactive Gallery Modal */
-        .gallery-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .gallery-modal.active {
-            display: flex;
-            opacity: 1;
-        }
-        
-        .modal-content {
-            max-width: 90%;
-            max-height: 90%;
-            position: relative;
-        }
-        
-        .modal-content img {
-            max-width: 100%;
-            max-height: 90vh;
-            border-radius: var(--radius);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        
-        .modal-description {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 20px;
-            border-bottom-left-radius: var(--radius);
-            border-bottom-right-radius: var(--radius);
-        }
-        
-        .modal-nav {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-            padding: 0 20px;
-        }
-        
-        .modal-nav-btn {
-            background: rgba(255,255,255,0.8);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 1.5rem;
-        }
-        
-        .modal-nav-btn:hover {
-            background: white;
-        }
-        
-        .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(255,255,255,0.8);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 1.2rem;
-        }
-        
-        .modal-close:hover {
-            background: white;
-        }
-        
-        .gallery-counter {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-        }
-        
-        /* NEW: Enhanced Before/After Section */
-        .before-after-service {
-            margin-bottom: 80px;
-        }
-        
-        .before-after-service h3 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: var(--primary-dark);
-        }
-        
-        .before-after-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
-        }
-        
-        .comparison-slider {
-            position: relative;
-            width: 100%;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .comparison-image {
-            width: 100%;
-            height: 300px;
-            position: relative;
-        }
-        
-        .before, .after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .after {
-            width: 50%;
-            overflow: hidden;
-        }
-        
-        .slider-handle {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 4px;
-            height: 100%;
-            background: white;
-            cursor: col-resize;
-            transform: translateX(-50%);
-        }
-        
-        .slider-handle:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: white;
-            box-shadow: var(--shadow);
-        }
-        
-        .slider-label {
-            position: absolute;
-            top: 15px;
-            padding: 5px 15px;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            border-radius: 3px;
-            font-size: 0.9rem;
-        }
-        
-        .before-label {
-            left: 15px;
-        }
-        
-        .after-label {
-            right: 15px;
-        }
-
         /* NEW: Interactive FAQ Chat */
         .faq-chat-container {
             max-width: 800px;
@@ -1032,63 +753,7 @@
             background: var(--primary);
             color: white;
         }
-        
-        /* NEW: Booking Tool */
-        .booking-section {
-            background: var(--light);
-            padding: 80px 0;
-        }
-        
-        .booking-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-lg);
-            overflow: hidden;
-        }
-        
-        .booking-header {
-            background: var(--gradient);
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
-        
-        .booking-content {
-            padding: 40px;
-        }
-        
-        .booking-step {
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .booking-step:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-        
-        .step-number {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 30px;
-            margin-right: 10px;
-        }
-        
-        .booking-btn {
-            display: block;
-            width: 100%;
-            text-align: center;
-            margin-top: 20px;
-        }
-        
+
         /* NEW: Interactive Map */
         .interactive-map {
             height: 500px;
@@ -1443,36 +1108,6 @@
             margin-bottom: 20px;
         }
 
-        /* Gallery Styles */
-        .gallery-filters {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 50px;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .gallery-filter {
-            padding: 12px 25px;
-            background: white;
-            border: 2px solid #eee;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        
-        .gallery-filter.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-        
-        .before-after-section {
-            padding: 80px 0;
-            background: var(--light);
-        }
-        
         /* Contact Styles */
         .contact-details-section {
             padding: 80px 0;
@@ -1803,7 +1438,7 @@
         /* Contact Form Styles */
         .contact-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 60px;
         }
         
@@ -1812,6 +1447,8 @@
             background: white;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
+            max-width: 600px;
+            margin: 0 auto;
         }
         
         .contact-details {
@@ -1868,42 +1505,6 @@
             background: var(--primary);
             color: white;
             transform: translateY(-5px);
-        }
-        
-        .contact-form {
-            padding: 40px;
-            background: white;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
-        
-        .form-group {
-            margin-bottom: 25px;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: var(--radius);
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            border-color: var(--primary);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
-        }
-        
-        .form-group textarea {
-            height: 150px;
-            resize: vertical;
         }
         
         .skills {
@@ -1964,10 +1565,6 @@
             
             .nav-links {
                 max-width: 500px;
-            }
-            
-            .before-after-grid {
-                grid-template-columns: 1fr;
             }
         }
 
@@ -2135,14 +1732,6 @@
             nav {
                 height: 90px;
             }
-            
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .before-after-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -2158,30 +1747,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- NEW: Scroll to Top Button -->
     <div class="scroll-to-top">
         <i class="fas fa-chevron-up"></i>
-    </div>
-    
-    <!-- NEW: Interactive Gallery Modal -->
-    <div class="gallery-modal" id="galleryModal">
-        <div class="modal-content">
-            <div class="gallery-counter">
-                <span id="currentImage">1</span> of <span id="totalImages">10</span>
-            </div>
-            <img id="modalImage" src="" alt="">
-            <div class="modal-description" id="modalDescription">
-                <!-- Description will be inserted here -->
-            </div>
-            <div class="modal-nav">
-                <div class="modal-nav-btn" id="prevImage">
-                    <i class="fas fa-chevron-left"></i>
-                </div>
-                <div class="modal-nav-btn" id="nextImage">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
-            <div class="modal-close" id="closeModal">
-                <i class="fas fa-times"></i>
-            </div>
-        </div>
     </div>
     
     <!-- Fixed Header -->
@@ -2207,7 +1772,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <ul class="nav-links">
                     <li><a href="#home" aria-label="Home">Home</a></li>
                     <li><a href="#services" aria-label="Our Services">Services</a></li>
-                    <li><a href="#gallery" aria-label="Our Gallery">Gallery</a></li>
                     <li><a href="#blog" aria-label="Blog">Blog</a></li>
                     <li><a href="#about" aria-label="About Us">About</a></li>
                     <li><a href="#contact" aria-label="Contact Us">Contact</a></li>
@@ -2226,8 +1790,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h1>Professional Painting & Drywall Services in Billings MT</h1>
                 <p>With over 15 years of professional experience, we're now serving Billings, Laurel, Shepherd and Yellowstone County. Quality interior painting, exterior painting, and drywall repair.</p>
                 <div class="hero-btns">
-                    <a href="#gallery" class="btn pulse">View Our Billings Projects</a>
-                    <a href="#contact" class="btn btn-outline pulse">Free Estimate (406) 233-9557</a>
+                    <a href="#contact" class="btn pulse">Free Estimate (406) 233-9557</a>
+                    <a href="#services" class="btn btn-outline pulse">View Our Services</a>
                 </div>
             </div>
         </div>
@@ -2522,190 +2086,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="page-section">
-        <div class="container">
-            <div class="gallery-hero">
-                <h1>Our Billings MT Projects Gallery</h1>
-                <p>See examples of our painting, drywall, and stucco work transforming homes and businesses throughout Yellowstone County</p>
-            </div>
-            
-            <div class="gallery-filters">
-                <div class="gallery-filter active" data-filter="all">All Projects</div>
-                <div class="gallery-filter" data-filter="painting">Painting</div>
-                <div class="gallery-filter" data-filter="drywall">Drywall</div>
-                <div class="gallery-filter" data-filter="stucco">Stucco</div>
-                <div class="gallery-filter" data-filter="commercial">Commercial</div>
-                <div class="gallery-filter" data-filter="residential">Residential</div>
-            </div>
-            
-            <div class="gallery-grid">
-                <!-- Painting Projects - 10 images -->
-                <div class="gallery-item" data-categories="painting residential" data-gallery="painting" data-index="0">
-                    <div class="project-type">Painting</div>
-                    <div class="gallery-img">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Interior painting project in Billings Montana home">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Billings Interior Painting</h3>
-                        <p>Complete interior painting transformation for a West End Billings home</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item" data-categories="painting commercial" data-gallery="painting" data-index="1">
-                    <div class="project-type">Painting</div>
-                    <div class="gallery-img">
-                        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Exterior painting project Billings MT commercial building">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Billings Exterior Painting</h3>
-                        <p>Commercial building exterior painting and restoration in Downtown Billings</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item" data-categories="painting residential" data-gallery="painting" data-index="2">
-                    <div class="project-type">Painting</div>
-                    <div class="gallery-img">
-                        <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Living room painting Billings MT">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Living Room Makeover</h3>
-                        <p>Complete living room transformation with accent wall in Laurel home</p>
-                    </div>
-                </div>
-                
-                <!-- Additional painting gallery items would go here (7 more) -->
-                
-                <!-- Drywall Projects - 10 images -->
-                <div class="gallery-item" data-categories="drywall residential" data-gallery="drywall" data-index="0">
-                    <div class="project-type">Drywall</div>
-                    <div class="gallery-img">
-                        <img src="https://images.unsplash.com/photo-1621370664677-494c7093d6a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Drywall installation project Billings Heights Montana">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Drywall Installation Billings</h3>
-                        <p>New drywall installation for office space renovation in Billings Heights</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item" data-categories="drywall residential" data-gallery="drywall" data-index="1">
-                    <div class="project-type">Drywall</div>
-                    <div class="gallery-img">
-                        <img src="https://images.unsplash.com/photo-1631679706909-8a5a5c4aace4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Drywall repair in Shepherd MT home">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Drywall Repair Shepherd</h3>
-                        <p>Water damage repair and texture matching in Shepherd residence</p>
-                    </div>
-                </div>
-                
-                <!-- Additional drywall gallery items would go here (8 more) -->
-                
-                <!-- Stucco Projects - 10 images -->
-                <div class="gallery-item" data-categories="stucco residential" data-gallery="stucco" data-index="0">
-                    <div class="project-type">Stucco</div>
-                    <div class="gallery-img">
-                        <img src="https://images.unsplash.com/photo-1600585154340-6f29e3c01379?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Stucco application Billings MT home">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Residential Stucco Application</h3>
-                        <p>Traditional stucco application on new construction in West End Billings</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item" data-categories="stucco residential" data-gallery="stucco" data-index="1">
-                    <div class="project-type">Stucco</div>
-                    <div class="gallery-img">
-                        <img src="https://images.unsplash.com/photo-1577495508326-19a1b3cf65a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Stucco repair Yellowstone County">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Stucco Repair Project</h3>
-                        <p>Crack repair and resealing of stucco exterior in Yellowstone County home</p>
-                    </div>
-                </div>
-                
-                <!-- Additional stucco gallery items would go here (8 more) -->
-            </div>
-        </div>
-        
-        <!-- Before/After Section - Enhanced with all services -->
-        <div class="before-after-section">
-            <div class="container">
-                <h2>See Our Transformations</h2>
-                <p>Drag the slider to see before and after results of our Billings projects</p>
-                
-                <!-- Painting Before/After -->
-                <div class="before-after-service">
-                    <h3>Painting Transformations</h3>
-                    <div class="before-after-grid">
-                        <div class="comparison-slider">
-                            <div class="comparison-image">
-                                <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Before exterior painting Billings MT" class="before">
-                                <div class="after">
-                                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="After exterior painting Billings MT">
-                                </div>
-                                <div class="slider-handle"></div>
-                                <div class="slider-label before-label">Before</div>
-                                <div class="slider-label after-label">After</div>
-                            </div>
-                        </div>
-                        
-                        <!-- Additional painting before/after sliders would go here (4 more) -->
-                    </div>
-                </div>
-                
-                <!-- Drywall Before/After -->
-                <div class="before-after-service">
-                    <h3>Drywall Transformations</h3>
-                    <div class="before-after-grid">
-                        <div class="comparison-slider">
-                            <div class="comparison-image">
-                                <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Before drywall repair Billings MT" class="before">
-                                <div class="after">
-                                    <img src="https://images.unsplash.com/photo-1621370664677-494c7093d6a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="After drywall repair Billings MT">
-                                </div>
-                                <div class="slider-handle"></div>
-                                <div class="slider-label before-label">Before</div>
-                                <div class="slider-label after-label">After</div>
-                            </div>
-                        </div>
-                        
-                        <!-- Additional drywall before/after sliders would go here (4 more) -->
-                    </div>
-                </div>
-                
-                <!-- Stucco Before/After -->
-                <div class="before-after-service">
-                    <h3>Stucco Transformations</h3>
-                    <div class="before-after-grid">
-                        <div class="comparison-slider">
-                            <div class="comparison-image">
-                                <img src="https://images.unsplash.com/photo-1577495508045-87cc6c8d7a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Before stucco application Billings MT" class="before">
-                                <div class="after">
-                                    <img src="https://images.unsplash.com/photo-1600585154340-6f29e3c01379?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="After stucco application Billings MT">
-                                </div>
-                                <div class="slider-handle"></div>
-                                <div class="slider-label before-label">Before</div>
-                                <div class="slider-label after-label">After</div>
-                            </div>
-                        </div>
-                        
-                        <!-- Additional stucco before/after sliders would go here (4 more) -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Gallery CTA -->
-        <div class="gallery-cta">
-            <div class="container">
-                <h2>Ready to Transform Your Space?</h2>
-                <p>Let us bring the same quality and attention to detail to your painting, drywall, or stucco project</p>
-                <a href="#contact" class="btn" style="margin-top: 30px;">Get Your Free Estimate</a>
-            </div>
-        </div>
-    </section>
-
     <!-- Blog Section -->
     <section id="blog" class="page-section">
         <div class="container">
@@ -2987,56 +2367,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <p>Send us details about your project and we'll get back to you with a customized estimate.</p>
                             <a href="mailto:dannyedwardparsons@gmail.com" class="btn" style="margin-top: 20px;">Send Email</a>
                         </div>
-                        
-                        <div class="contact-method">
-                            <div class="contact-icon-large">
-                                <i class="fas fa-comment-alt"></i>
-                            </div>
-                            <h3>Contact Form</h3>
-                            <p>Fill out our online form with your project details and we'll respond promptly.</p>
-                            <a href="#contact-form" class="btn" style="margin-top: 20px;">Use Contact Form</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- NEW: Booking Tool Section -->
-            <div class="booking-section">
-                <div class="container">
-                    <h2 style="text-align: center; margin-bottom: 20px;">Schedule Your Free Estimate</h2>
-                    <p style="text-align: center; max-width: 700px; margin: 0 auto 50px;">Book a convenient time for your free, no-obligation estimate with our Billings painting experts.</p>
-                    
-                    <div class="booking-container">
-                        <div class="booking-header">
-                            <h3>Book Your Free Estimate</h3>
-                            <p>Choose a time that works for you</p>
-                        </div>
-                        <div class="booking-content">
-                            <div class="booking-step">
-                                <h4><span class="step-number">1</span> Select Service</h4>
-                                <p>Choose the service you're interested in:</p>
-                                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
-                                    <button class="service-quick-link active">Painting</button>
-                                    <button class="service-quick-link">Drywall</button>
-                                    <button class="service-quick-link">Stucco</button>
-                                    <button class="service-quick-link">Multiple Services</button>
-                                </div>
-                            </div>
-                            
-                            <div class="booking-step">
-                                <h4><span class="step-number">2</span> Choose Date & Time</h4>
-                                <p>Select a convenient time for your free estimate:</p>
-                                <!-- Calendly inline widget -->
-                                <div class="calendly-inline-widget" data-url="https://calendly.com/dannyeparsons" style="min-width:320px;height:630px;"></div>
-                            </div>
-                            
-                            <div class="booking-step">
-                                <h4><span class="step-number">3</span> Confirm Details</h4>
-                                <p>We'll confirm your appointment and provide all the details you need to prepare for our visit.</p>
-                            </div>
-                            
-                            <a href="https://calendly.com/dannyeparsons" target="_blank" class="btn booking-btn">Schedule Your Free Estimate Now</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -3103,7 +2433,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <a href="https://www.linkedin.com/in/lifetimestuccoexteriors?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                             
-                            <!-- NEW: Formspree Form -->
+                            <!-- Formspree Quick Message Form -->
                             <div style="margin-top: 30px;">
                                 <h4>Quick Message</h4>
                                 <form action="https://formspree.io/f/mblkddjg" method="POST" style="margin-top: 15px;">
@@ -3115,54 +2445,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
                                     </div>
                                     <div style="margin-bottom: 15px;">
+                                        <input type="tel" name="phone" placeholder="Your Phone" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                                    </div>
+                                    <div style="margin-bottom: 15px;">
+                                        <select name="service" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                                            <option value="" disabled selected>Service Interested In</option>
+                                            <option value="interior-painting">Interior Painting</option>
+                                            <option value="exterior-painting">Exterior Painting</option>
+                                            <option value="drywall-installation">Drywall Installation</option>
+                                            <option value="drywall-repair">Drywall Repair</option>
+                                            <option value="stucco-installation">Stucco Installation</option>
+                                            <option value="stucco-repair">Stucco Repair</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div style="margin-bottom: 15px;">
                                         <textarea name="message" placeholder="Brief message about your project" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; height: 100px;"></textarea>
                                     </div>
                                     <button type="submit" class="btn" style="width: 100%;">Send Quick Message</button>
                                 </form>
                             </div>
-                        </div>
-                        <div class="contact-form">
-                            <form id="contactForm" action="https://formspree.io/f/mblkddjg" method="POST">
-                                <input type="hidden" name="_subject" value="New Contact Form Submission - Danny E Parsons Painting Billings">
-                                <input type="hidden" name="_replyto" value="dannyedwardparsons@gmail.com">
-                                <div class="form-group">
-                                    <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
-                                </div>
-                                <div class="form-group">
-                                    <input type="tel" name="phone" placeholder="Your Phone" aria-label="Your Phone">
-                                </div>
-                                <div class="form-group">
-                                    <select name="service" aria-label="Service Interested In" required>
-                                        <option value="" disabled selected>Service Interested In</option>
-                                        <option value="interior-painting">Interior Painting</option>
-                                        <option value="exterior-painting">Exterior Painting</option>
-                                        <option value="drywall-installation">Drywall Installation</option>
-                                        <option value="drywall-repair">Drywall Repair</option>
-                                        <option value="stucco-installation">Stucco Installation</option>
-                                        <option value="stucco-repair">Stucco Repair</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <select name="location" aria-label="Project Location" required>
-                                        <option value="" disabled selected>Project Location</option>
-                                        <option value="billings">Billings</option>
-                                        <option value="laurel">Laurel</option>
-                                        <option value="shepherd">Shepherd</option>
-                                        <option value="billings-heights">Billings Heights</option>
-                                        <option value="west-end">West End</option>
-                                        <option value="downtown-billings">Downtown Billings</option>
-                                        <option value="other-yellowstone">Other Yellowstone County</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <textarea name="message" placeholder="Tell us about your project - include details like room sizes, current condition, and your timeline" required aria-label="Your Message"></textarea>
-                                </div>
-                                <button type="submit" class="btn vibrant-accent">Send Message</button>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -3173,7 +2475,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2 style="text-align: center; margin-bottom: 20px;">We Serve Billings and Yellowstone County</h2>
                     <p style="text-align: center; max-width: 700px; margin: 0 auto;">Our professional painting, drywall, and stucco services are available throughout Billings, Laurel, Shepherd, and all of Yellowstone County.</p>
                     
-                    <!-- NEW: Interactive Map -->
+                    <!-- Interactive Map -->
                     <div class="interactive-map">
                         <div class="map-overlay">
                             <h3>Our Service Area</h3>
@@ -3198,7 +2500,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
             
-            <!-- NEW: Interactive FAQ Chat -->
+            <!-- Interactive FAQ Chat -->
             <div class="faq-contact">
                 <div class="container">
                     <h2 style="text-align: center; margin-bottom: 50px;">Frequently Asked Questions</h2>
@@ -3255,7 +2557,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#blog">Blog</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -3345,9 +2646,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             initScrollToTop();
             initEnhancedFAQ();
             initEnhancedAnalytics();
-            initInteractiveGallery();
             initFAQChat();
-            initBeforeAfterSliders();
         });
 
         // Listen for hash changes
@@ -3524,141 +2823,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
         });
 
-        // Gallery Filtering
-        const galleryFilters = document.querySelectorAll('.gallery-filter');
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        
-        galleryFilters.forEach(filter => {
-            filter.addEventListener('click', function() {
-                // Remove active class from all filters
-                galleryFilters.forEach(f => f.classList.remove('active'));
-                
-                // Add active class to clicked filter
-                this.classList.add('active');
-                
-                // Track gallery filter interaction in analytics
-                gtag('event', 'gallery_filter', {
-                    'event_category': 'engagement',
-                    'event_label': this.getAttribute('data-filter')
-                });
-                
-                // Get filter value
-                const filterValue = this.getAttribute('data-filter');
-                
-                // Filter gallery items
-                galleryItems.forEach(item => {
-                    if (filterValue === 'all') {
-                        item.style.display = 'block';
-                    } else {
-                        const categories = item.getAttribute('data-categories');
-                        if (categories.includes(filterValue)) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    }
-                });
-            });
-        });
-
-        // NEW: Interactive Gallery Functionality
-        function initInteractiveGallery() {
-            const galleryModal = document.getElementById('galleryModal');
-            const modalImage = document.getElementById('modalImage');
-            const modalDescription = document.getElementById('modalDescription');
-            const currentImage = document.getElementById('currentImage');
-            const totalImages = document.getElementById('totalImages');
-            const prevBtn = document.getElementById('prevImage');
-            const nextBtn = document.getElementById('nextImage');
-            const closeBtn = document.getElementById('closeModal');
-            
-            let currentGallery = '';
-            let currentIndex = 0;
-            let galleryItems = [];
-            
-            // Open gallery modal when gallery item is clicked
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    currentGallery = this.getAttribute('data-gallery');
-                    currentIndex = parseInt(this.getAttribute('data-index'));
-                    
-                    // Get all items in this gallery
-                    galleryItems = Array.from(document.querySelectorAll(`.gallery-item[data-gallery="${currentGallery}"]`));
-                    
-                    // Update modal with current image
-                    updateModal();
-                    
-                    // Show modal
-                    galleryModal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-            
-            // Navigation functions
-            function updateModal() {
-                const currentItem = galleryItems[currentIndex];
-                const imgSrc = currentItem.querySelector('img').src;
-                const title = currentItem.querySelector('.gallery-overlay h3').textContent;
-                const description = currentItem.querySelector('.gallery-overlay p').textContent;
-                
-                modalImage.src = imgSrc;
-                modalImage.alt = currentItem.querySelector('img').alt;
-                modalDescription.innerHTML = `<h4>${title}</h4><p>${description}</p>`;
-                currentImage.textContent = currentIndex + 1;
-                totalImages.textContent = galleryItems.length;
-                
-                // Update button states
-                prevBtn.style.display = currentIndex === 0 ? 'none' : 'flex';
-                nextBtn.style.display = currentIndex === galleryItems.length - 1 ? 'none' : 'flex';
-            }
-            
-            // Previous image
-            prevBtn.addEventListener('click', function() {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    updateModal();
-                }
-            });
-            
-            // Next image
-            nextBtn.addEventListener('click', function() {
-                if (currentIndex < galleryItems.length - 1) {
-                    currentIndex++;
-                    updateModal();
-                }
-            });
-            
-            // Close modal
-            closeBtn.addEventListener('click', function() {
-                galleryModal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            });
-            
-            // Close modal when clicking outside
-            galleryModal.addEventListener('click', function(e) {
-                if (e.target === galleryModal) {
-                    galleryModal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', function(e) {
-                if (galleryModal.classList.contains('active')) {
-                    if (e.key === 'Escape') {
-                        galleryModal.classList.remove('active');
-                        document.body.style.overflow = 'auto';
-                    } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
-                        currentIndex--;
-                        updateModal();
-                    } else if (e.key === 'ArrowRight' && currentIndex < galleryItems.length - 1) {
-                        currentIndex++;
-                        updateModal();
-                    }
-                }
-            });
-        }
-        
         // NEW: Interactive FAQ Chat
         function initFAQChat() {
             const chatMessages = document.getElementById('faqChatMessages');
@@ -3698,57 +2862,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     // Scroll to bottom of chat
                     chatMessages.scrollTop = chatMessages.scrollHeight;
                 });
-            });
-        }
-        
-        // NEW: Before/After Slider Functionality
-        function initBeforeAfterSliders() {
-            document.querySelectorAll('.comparison-slider').forEach(slider => {
-                const handle = slider.querySelector('.slider-handle');
-                const afterImage = slider.querySelector('.after');
-                
-                let isResizing = false;
-                
-                handle.addEventListener('mousedown', function(e) {
-                    isResizing = true;
-                    document.addEventListener('mousemove', handleResize);
-                    document.addEventListener('mouseup', stopResize);
-                });
-                
-                handle.addEventListener('touchstart', function(e) {
-                    isResizing = true;
-                    document.addEventListener('touchmove', handleResize);
-                    document.addEventListener('touchend', stopResize);
-                });
-                
-                function handleResize(e) {
-                    if (!isResizing) return;
-                    
-                    let clientX;
-                    if (e.type === 'mousemove') {
-                        clientX = e.clientX;
-                    } else if (e.type === 'touchmove') {
-                        clientX = e.touches[0].clientX;
-                    }
-                    
-                    const sliderRect = slider.getBoundingClientRect();
-                    const sliderWidth = sliderRect.width;
-                    const sliderLeft = sliderRect.left;
-                    
-                    let newWidth = ((clientX - sliderLeft) / sliderWidth) * 100;
-                    
-                    // Constrain between 0 and 100
-                    newWidth = Math.max(0, Math.min(100, newWidth));
-                    
-                    afterImage.style.width = `${newWidth}%`;
-                    handle.style.left = `${newWidth}%`;
-                }
-                
-                function stopResize() {
-                    isResizing = false;
-                    document.removeEventListener('mousemove', handleResize);
-                    document.removeEventListener('touchmove', handleResize);
-                }
             });
         }
 
@@ -3829,7 +2942,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
             
             // Track form interactions
-            const contactForm = document.getElementById('contactForm');
+            const contactForm = document.querySelector('form');
             if (contactForm) {
                 contactForm.addEventListener('submit', function() {
                     gtag('event', 'form_submit', {
@@ -3869,7 +2982,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
         
         // Form submission
-        const contactForm = document.getElementById('contactForm');
+        const contactForm = document.querySelector('form');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
                 // Let Formspree handle the submission
@@ -3911,8 +3024,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             observer.observe(element);
         });
     </script>
-    
-    <!-- Calendly Integration Script -->
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
