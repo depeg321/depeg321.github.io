@@ -1,31 +1,3 @@
-# All search engines
 User-agent: *
 Allow: /
-Disallow: /private/
-Disallow: /admin/
-Disallow: /tmp/
-Disallow: /cgi-bin/
-Disallow: /backup/
-Disallow: /*.pdf$
-Disallow: /*?*
-Crawl-delay: 1
-
-# Googlebot - can crawl faster
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-# Bingbot settings
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-# Block bad bots
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
-# Sitemap location
 Sitemap: https://dannyeparsonspainting.com/sitemap.xml
