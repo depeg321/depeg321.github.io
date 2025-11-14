@@ -9,8 +9,8 @@
     <link rel="canonical" href="https://dannyeparsonspainting.com">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/favicon.png">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/favicon.png">
     
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -119,12 +119,13 @@
         }
 
         .logo {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             border: 5px solid white;
             margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            object-fit: cover;
         }
 
         h1 {
@@ -186,6 +187,26 @@
             align-items: center;
         }
 
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid white;
+            object-fit: cover;
+        }
+
+        .nav-text {
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
         .nav-links {
             display: flex;
             list-style: none;
@@ -207,6 +228,7 @@
             color: white;
             font-weight: 600;
             font-size: 1.1rem;
+            text-decoration: none;
         }
 
         /* Sections */
@@ -275,6 +297,7 @@
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
+            font-family: inherit;
         }
 
         .filter-btn.active,
@@ -441,6 +464,7 @@
             border: 2px solid #e2e8f0;
             border-radius: 8px;
             font-family: inherit;
+            font-size: 16px;
         }
 
         .form-group textarea {
@@ -453,6 +477,15 @@
             color: white;
             padding: 40px 0;
             text-align: center;
+        }
+
+        .footer-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 3px solid white;
+            object-fit: cover;
         }
 
         .social-links {
@@ -516,6 +549,11 @@
             .gallery-item {
                 min-height: 250px;
             }
+
+            .logo {
+                width: 140px;
+                height: 140px;
+            }
         }
     </style>
 </head>
@@ -523,7 +561,10 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <div style="color: white; font-weight: 700; font-size: 1.2rem;">Danny E Parsons Painting</div>
+            <div class="nav-brand">
+                <img src="/favicon.png" alt="Danny E Parsons Painting" class="nav-logo">
+                <div class="nav-text">Danny E Parsons Painting</div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#gallery">Gallery</a></li>
@@ -544,7 +585,7 @@
         </div>
         
         <div class="hero-content">
-            <img src="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/FB_IMG_1636543853784.jpg" 
+            <img src="https://raw.githubusercontent.com/depeg321/depeg321.github.io/main/favicon.png" 
                  alt="Danny E Parsons Painting Logo" 
                  class="logo">
             <h1>Professional Painting & Drywall Services</h1>
@@ -604,8 +645,8 @@
             <div class="gallery-grid">
                 <!-- Interior Projects -->
                 <div class="gallery-item" data-category="interior">
-                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800" 
-                         alt="Modern interior living room painting" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=800&q=80" 
+                         alt="Modern living room interior painting with gray walls" loading="lazy">
                     <div class="gallery-overlay">
                         <h4>Modern Living Room</h4>
                         <p>Complete interior transformation</p>
@@ -613,8 +654,8 @@
                 </div>
                 
                 <div class="gallery-item" data-category="interior">
-                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800" 
-                         alt="Bedroom interior painting" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80" 
+                         alt="Bedroom interior painting with warm colors" loading="lazy">
                     <div class="gallery-overlay">
                         <h4>Master Bedroom</h4>
                         <p>Peaceful color palette</p>
@@ -622,18 +663,27 @@
                 </div>
                 
                 <div class="gallery-item" data-category="interior">
-                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800" 
-                         alt="Kitchen cabinet painting" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" 
+                         alt="Kitchen interior with painted cabinets" loading="lazy">
                     <div class="gallery-overlay">
                         <h4>Kitchen Renovation</h4>
                         <p>Cabinet refinishing</p>
                     </div>
                 </div>
                 
+                <div class="gallery-item" data-category="interior">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80" 
+                         alt="Dining room painted walls" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Dining Room</h4>
+                        <p>Elegant finish</p>
+                    </div>
+                </div>
+                
                 <!-- Exterior Projects -->
                 <div class="gallery-item" data-category="exterior">
-                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800" 
-                         alt="Exterior house painting" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80" 
+                         alt="Residential exterior house painting" loading="lazy">
                     <div class="gallery-overlay">
                         <h4>Residential Exterior</h4>
                         <p>Full house painting</p>
@@ -641,8 +691,8 @@
                 </div>
                 
                 <div class="gallery-item" data-category="exterior">
-                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800" 
-                         alt="Modern home exterior paint" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" 
+                         alt="Modern home exterior paint job" loading="lazy">
                     <div class="gallery-overlay">
                         <h4>Modern Home</h4>
                         <p>Contemporary color scheme</p>
@@ -650,67 +700,76 @@
                 </div>
                 
                 <div class="gallery-item" data-category="exterior">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800" 
-                         alt="Commercial building exterior" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80" 
+                         alt="Two story house exterior painting" loading="lazy">
                     <div class="gallery-overlay">
-                        <h4>Commercial Building</h4>
-                        <p>Professional finish</p>
+                        <h4>Two-Story Home</h4>
+                        <p>Complete exterior makeover</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="exterior">
+                    <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&q=80" 
+                         alt="Colonial style house painted exterior" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Colonial Style</h4>
+                        <p>Classic look restored</p>
                     </div>
                 </div>
                 
                 <!-- Drywall Projects -->
                 <div class="gallery-item" data-category="drywall">
-                    <img src="https://images.unsplash.com/photo-1621370664677-494c7093d6a9?w=800" 
-                         alt="Drywall installation" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=800&q=80" 
+                         alt="Professional drywall installation Billings Montana contractor" loading="lazy" width="800" height="600">
                     <div class="gallery-overlay">
                         <h4>Drywall Installation</h4>
-                        <p>New construction</p>
+                        <p>New construction work</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item" data-category="drywall">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800" 
-                         alt="Drywall repair work" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=800&q=80" 
+                         alt="Drywall repair and texture matching Yellowstone County" loading="lazy" width="800" height="600">
                     <div class="gallery-overlay">
-                        <h4>Repair Work</h4>
-                        <p>Seamless finish</p>
+                        <h4>Repair & Finishing</h4>
+                        <p>Smooth seamless finish</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="drywall">
+                    <img src="https://images.unsplash.com/photo-1504615755583-2916b52192b3?w=800&q=80" 
+                         alt="Commercial drywall project office renovation Billings" loading="lazy" width="800" height="600">
+                    <div class="gallery-overlay">
+                        <h4>Commercial Project</h4>
+                        <p>Office space renovation</p>
                     </div>
                 </div>
                 
                 <!-- Stucco Projects -->
                 <div class="gallery-item" data-category="stucco">
-                    <img src="https://images.unsplash.com/photo-1600585154340-6f29e3c01379?w=800" 
-                         alt="Stucco exterior finish" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?w=800&q=80" 
+                         alt="Stucco exterior finish application Montana home" loading="lazy" width="800" height="600">
                     <div class="gallery-overlay">
                         <h4>Stucco Application</h4>
-                        <p>Textured finish</p>
+                        <p>Premium textured finish</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item" data-category="stucco">
-                    <img src="https://images.unsplash.com/photo-1577495508326-19a1b3cf65a7?w=800" 
-                         alt="Stucco repair restoration" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1600585154340-6f29e3c01379?w=800&q=80" 
+                         alt="Professional stucco repair restoration Billings MT" loading="lazy" width="800" height="600">
                     <div class="gallery-overlay">
                         <h4>Stucco Restoration</h4>
-                        <p>Expert repair work</p>
+                        <p>Expert repair service</p>
                     </div>
                 </div>
                 
-                <div class="gallery-item" data-category="interior">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800" 
-                         alt="Interior wall painting detail" loading="lazy">
+                <div class="gallery-item" data-category="stucco">
+                    <img src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?w=800&q=80" 
+                         alt="Mediterranean style stucco home Yellowstone County Montana" loading="lazy" width="800" height="600">
                     <div class="gallery-overlay">
-                        <h4>Accent Wall</h4>
-                        <p>Bold design choice</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item" data-category="exterior">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800" 
-                         alt="Two-story house exterior paint" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h4>Two-Story Home</h4>
-                        <p>Complete exterior makeover</p>
+                        <h4>Mediterranean Style</h4>
+                        <p>Complete stucco exterior</p>
                     </div>
                 </div>
             </div>
@@ -752,7 +811,7 @@
                         </div>
                         <div>
                             <h4>Email</h4>
-                            <p><a href="mailto:dannyedwardparsons@gmail.com" style="color: inherit; text-decoration: none;">dannyedwardparsons@gmail.com</a></p>
+                            <p><a href="/cdn-cgi/l/email-protection#ddb9bcb3b3a4b8b9aabcafb9adbcafaeb2b3ae9dbab0bcb4b1f3beb2b0" style="color: inherit; text-decoration: none;"><span class="__cf_email__" data-cfemail="8eeaefe0e0f7ebeaf9effceafeeffcfde1e0fdcee9e3efe7e2a0ede1e3">[email&#160;protected]</span></a></p>
                         </div>
                     </div>
                     
@@ -808,14 +867,15 @@
     <!-- Footer -->
     <footer>
         <div class="container">
+            <img src="/favicon.png" alt="Danny E Parsons Painting" class="footer-logo">
             <h3>Danny E Parsons Painting & Drywall</h3>
             <p>Professional Painting Contractor | Billings, MT | 25+ Years Experience</p>
             
             <div class="social-links">
-                <a href="https://www.facebook.com/share/1BiJ9kM9hC/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://x.com/D3P3G321" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/lifetime.stucco.exteriors" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/lifetimestuccoexteriors" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/share/1BiJ9kM9hC/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/D3P3G321" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/lifetime.stucco.exteriors" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/lifetimestuccoexteriors" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
             
             <p style="margin-top: 30px; opacity: 0.7;">&copy; 2025 Danny E Parsons Painting and Drywall. All Rights Reserved.</p>
@@ -823,20 +883,18 @@
     </footer>
 
     <!-- Floating Call Button -->
-    <a href="tel:4062339557" class="floating-call">
+    <a href="tel:4062339557" class="floating-call" aria-label="Call Us">
         <i class="fas fa-phone"></i>
     </a>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Gallery Filter
         const filterBtns = document.querySelectorAll('.filter-btn');
         const galleryItems = document.querySelectorAll('.gallery-item');
         
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Remove active class from all buttons
                 filterBtns.forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
                 btn.classList.add('active');
                 
                 const filter = btn.dataset.filter;
@@ -918,6 +976,7 @@
                 }
             });
         });
-    </script>
-</body>
-</html>
+
+        // Track form submission
+        document.querySelector('form').addEventListener('submit', () => {
+        
