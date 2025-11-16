@@ -1,0 +1,274 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Danny E Parsons Painting and Drywall",
+  "alternateName": "Danny E Parsons Painting",
+  "description": "Professional painting, drywall, and stucco contractor serving Billings Montana and Yellowstone County for over 25 years. Licensed and insured.",
+  
+  "foundingDate": "2000",
+  "founder": {
+    "@type": "Person",
+    "name": "Danny E Parsons"
+  },
+  
+  "knowsAbout": [
+    "Interior Painting",
+    "Exterior Painting",
+    "Residential Painting",
+    "Commercial Painting",
+    "Drywall Installation",
+    "Drywall Repair",
+    "Stucco Installation",
+    "Stucco Repair",
+    "Cabinet Refinishing",
+    "Deck Staining",
+    "Texture Matching",
+    "Montana Climate Painting",
+    "Weather-Resistant Coatings"
+  ],
+  
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "45.7833",
+      "longitude": "-108.5007",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Billings",
+        "addressRegion": "MT",
+        "addressCountry": "US"
+      }
+    },
+    "geoRadius": "50000",
+    "description": "Serving Billings, Laurel, Shepherd, Lockwood, Huntley, and all of Yellowstone County, Montana"
+  },
+  
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Billings",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Montana"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Laurel",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Montana"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Shepherd",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Montana"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Lockwood",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Montana"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Huntley",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Montana"
+      }
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Yellowstone County",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Montana"
+      }
+    }
+  ],
+  
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2016 Miles Ave",
+    "addressLocality": "Billings",
+    "addressRegion": "MT",
+    "postalCode": "59102",
+    "addressCountry": "US"
+  },
+  
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "45.7833",
+    "longitude": "-108.5007"
+  },
+  
+  "telephone": "+1-406-233-9602",
+  "email": "dannyedwardparsons@gmail.com",
+  "url": "https://dannyeparsonspainting.com",
+  
+  "priceRange": "$$",
+  "paymentAccepted": ["Cash", "Check", "Credit Card"],
+  
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "bestRating": "5",
+    "worstRating": "1",
+    "reviewCount": "47"
+  },
+  
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Painting and Drywall Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Interior Painting",
+          "description": "Professional interior painting services for homes and businesses in Billings Montana. Includes surface preparation, priming, and finish coats with premium paints.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Danny E Parsons Painting and Drywall"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Exterior Painting",
+          "description": "Weather-resistant exterior painting specifically designed for Montana's extreme climate. Protection against temperature fluctuations, UV rays, and moisture.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Danny E Parsons Painting and Drywall"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Drywall Installation",
+          "description": "Professional drywall installation for new construction and remodeling projects. Expert taping, mudding, and finishing.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Danny E Parsons Painting and Drywall"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Drywall Repair",
+          "description": "Expert drywall repair services including hole patching, water damage repair, and texture matching for seamless results.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Danny E Parsons Painting and Drywall"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Stucco Installation",
+          "description": "Professional stucco application for exterior walls. Durable, weather-resistant finish ideal for Montana climate.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Danny E Parsons Painting and Drywall"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Stucco Repair",
+          "description": "Expert stucco repair and restoration. Crack repair, texture matching, and waterproofing to extend the life of your stucco exterior.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Danny E Parsons Painting and Drywall"
+          }
+        }
+      }
+    ]
+  },
+  
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Years in Business",
+      "value": "25+"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Projects Completed",
+      "value": "1000+"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "License Status",
+      "value": "Licensed and Insured"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Service Type",
+      "value": "Residential and Commercial"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Free Estimates",
+      "value": "Yes"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Emergency Services",
+      "value": "Available"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Warranty Offered",
+      "value": "Yes - 2 years interior, 3 years exterior"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Best Season for Exterior Painting in Montana",
+      "value": "May through September"
+    }
+  ],
+  
+  "slogan": "Professional Painting & Drywall Services - Serving Billings, MT for Over 25 Years",
+  
+  "awards": [
+    "5-Star Google Rating",
+    "47+ Five-Star Reviews",
+    "Top-Rated Billings Contractor"
+  ],
+  
+  "keywords": "painting contractor Billings MT, drywall contractor Billings, interior painting, exterior painting Montana, stucco repair Yellowstone County, house painter Billings, commercial painting Billings, residential painting Montana, best painter Billings, painting contractor near me"
+}
